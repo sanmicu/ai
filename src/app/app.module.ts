@@ -9,6 +9,10 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { InventoryListComponent } from './inventory/inventory-list/inventory-list.component';
 import { InventoryItemComponent } from './inventory/inventory-list/inventory-item.component';
 import { DetailComponent } from './inventory/detail/detail.component';
+import { LocationAddComponent } from './inventory/location/location-add.component';
+import { DropdownDirective } from './dropdown.directive';
+import { InventoryService } from './inventory/inventory.service';
+import { LocationService } from './inventory/location/location.service';
 
 @NgModule({
   declarations: [
@@ -17,14 +21,16 @@ import { DetailComponent } from './inventory/detail/detail.component';
     InventoryComponent,
     InventoryListComponent,
     InventoryItemComponent,
-    DetailComponent
+    DetailComponent,
+    LocationAddComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [InventoryService, LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

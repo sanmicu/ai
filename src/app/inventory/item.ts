@@ -1,3 +1,5 @@
+import { Location } from "./location";
+
 export class Item {
-    constructor(public name:string, public quantity:number, public building:string, public room:string, public imagePath:string) {}
+    constructor(public name:string, public description:string, public imagePath:string, public locations: Location[]) {}
 }

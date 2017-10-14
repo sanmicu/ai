@@ -6,9 +6,7 @@
 <div class="row">
   <div class="col-xs-12">
     <ul class="list-group">
-      <app-inventory-item [item]="item_1" (click)="onSelected(item_1)"></app-inventory-item>
-      <app-inventory-item [item]="item_2" (click)="onSelected(item_2)"></app-inventory-item>
-
+      <app-inventory-item *ngFor="let item of items" [item]="item" (click)="onSelected(item)"></app-inventory-item>
     </ul>
   </div>
 </div>
