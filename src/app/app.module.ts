@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule, Router, Routes, RouterOutlet } from "@angular/router";
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -13,6 +16,10 @@ import { LocationAddComponent } from './inventory/location/location-add.componen
 import { DropdownDirective } from './dropdown.directive';
 import { InventoryService } from './inventory/inventory.service';
 import { LocationService } from './inventory/location/location.service';
+import { DefaultComponent } from './default.component';
+import {routes} from './app.routes';
+import { InventoryDefaultComponent } from './inventory/inventory-default.component';
+import { EditComponent } from './inventory/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +30,21 @@ import { LocationService } from './inventory/location/location.service';
     InventoryItemComponent,
     DetailComponent,
     LocationAddComponent,
-    DropdownDirective
+    DropdownDirective,
+    DefaultComponent,
+    InventoryDefaultComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule,
+    RouterTestingModule,
+    RouterModule.forRoot(routes)
+
   ],
-  providers: [InventoryService, LocationService],
+  providers: [InventoryService, LocationService, RouterOutlet],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

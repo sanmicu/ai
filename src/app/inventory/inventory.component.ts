@@ -5,7 +5,6 @@ import { Item } from './item';
   templateUrl: './inventory.component.html'
 })
 export class InventoryComponent implements OnInit {
-  selectedItem: Item;
   constructor() { }
 
   ngOnInit() {

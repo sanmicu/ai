@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <img src="/assets/images/logo.jpg" class="img-responsive" alt="Inwentaryzacja" style="padding-right: 30%;"/>
+      <a [routerLink]="['/']"><img src="/assets/images/logo.jpg" class="img-responsive" alt="Inwentaryzacja" style="padding-right: 30%;"/></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -11,7 +11,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sprzęt <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Dodaj</a></li>
-            <li><a href="inventory/inventory.component.html">Przeglądaj</a></li>
+            <li><a [routerLink]="['inwentarz']">Przeglądaj</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Inne</a></li>
           </ul>

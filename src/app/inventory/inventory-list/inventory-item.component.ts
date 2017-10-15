@@ -1,17 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Item } from '../item'
 
 @Component({
   selector: 'app-inventory-item',
   templateUrl: './inventory-item.component.html'
 })
-export class InventoryItemComponent implements OnInit {
+export class InventoryItemComponent  {
   @Input() item: Item;
-  itemId: number;
+  @Input() itemId: number = 1;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

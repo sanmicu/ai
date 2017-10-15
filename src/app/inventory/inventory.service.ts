@@ -23,4 +23,11 @@ export class InventoryService {
     return this.items;
   }
 
+  getItem(id: number){
+    return this.items[id];
+  }
+  deleteItem(item: Item){
+    this.items.splice(this.items.indexOf(item), 1);
+  }
+
 }
