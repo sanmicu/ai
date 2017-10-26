@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { RouterModule, Router, Routes, RouterOutlet } from "@angular/router";
@@ -20,6 +20,7 @@ import { DefaultComponent } from './default.component';
 import {routes} from './app.routes';
 import { InventoryDefaultComponent } from './inventory/inventory-default.component';
 import { EditComponent } from './inventory/edit/edit.component';
+
 
 @NgModule({
   declarations: [
@@ -41,10 +42,11 @@ import { EditComponent } from './inventory/edit/edit.component';
     HttpModule,
     RouterModule,
     RouterTestingModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
 
   ],
-  providers: [InventoryService, LocationService, RouterOutlet],
+  providers: [InventoryService, LocationService, RouterOutlet, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

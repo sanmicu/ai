@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+input.add-location{
+    border-style:none;
+    background-color:transparent;
+    cursor:pointer;
+    width: 40%;
+}
+
+input[disabled].add-location {
+    cursor:pointer;
+    height: 120%;
+}
+
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;

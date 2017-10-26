@@ -1,28 +1,85 @@
-<div class="row" style="margin-bottom: 5%;">
-  <div class="bs-callout bs-callout-default" style="max-width: 70%;">
-    <form id="location-add">
-      <div class="row">
-        <div class="col-sm-4 form-group">
-          <label for="quantity">Ilość</label>
-          <input type="text" id="quantity" required class="form-control">
-        </div>
+<form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
+  <div class="row"> 
+        <table class="table table-striped table-hover" style="max-width: 60%;cursor:pointer;">
+          <thead>
+            <tr>
+              <th>Ilość</th>
+              <th>Budynek</th>
+              <th>Sala</th>        
+            </tr>
+          </thead>
+          <tbody class="list-group" formArrayName="locations" *ngFor="let location of locationForm.controls['locations'].controls; let i = index">
+              <tr formGroupName="{{i}}">
+                <td>
+                  <input
+                    class="add-location"
+                    formControlName="quantity"
+                    disabled
+                    >
+                </td>
+                <td>
+                  <input
+                    class="add-location"
+                    formControlName="building"
+                    disabled>
+                </td>
+                <td style="width:30%;">
+                  <input   
+                    class="add-location"
+                    formControlName="room"
+                    disabled>
+                </td>
+                <button class="btn btn-danger" style="margin-top:5%;" (click)="onRemoveLocation(i)">X</button>
+                
+                
+             </tr>
+          </tbody>
+      </table>
+  </div>
 
-        <div class="col-sm-4 form-group">
-          <label for="building">Budynek</label>
-          <input type="text" id="building" required class="form-control">
-        </div>
-
-        <div class="col-sm-4 form-group">
-          <label for="room">Sala</label>
-          <input type="text" id="room" required class="form-control">
-        </div>
-      </div>
+  <div class="row" style="margin-bottom: 5%;">
+    <div class="bs-callout bs-callout-default" style="max-width: 70%;">
         <div class="row">
-          <div class="col-xs-12">
-            <button class="btn btn-success" type="submit">Dodaj</button>
-            <button class="btn btn-primary" type="submit">Wyczyść</button>
+          <div class="col-sm-4 form-group">
+            <label for="quantity">Ilość</label>
+            <input 
+              type="number"
+              id="quantity"
+              required
+              class="form-control"
+              #locationQuantity     
+              >
           </div>
-        </div> 
-    </form> 
-  </div>  
-</div>
+
+          <div class="col-sm-4 form-group">
+            <label for="building">Budynek</label>
+            <input
+              type="text"
+              id="building"
+              required
+              class="form-control"
+              #locationBuilding      
+              >
+          </div>
+
+          <div class="col-sm-4 form-group">
+            <label for="room">Sala</label>
+            <input 
+              type="text"
+              id="room"
+              required
+              class="form-control"
+              #locationRoom
+              >
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <button class="btn btn-success" type="submit" [disabled]="!locationForm.valid" (click)="onAddLocation(locationQuantity.value, locationBuilding.value, locationRoom.value)">Dodaj</button>
+              <button class="btn btn-primary" type="button" (click)="onCancel()">Powrót</button>
+            </div>
+          </div> 
+      
+    </div>  
+  </div>
+</form> 

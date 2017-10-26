@@ -1,3 +1,108 @@
-<p>
-  edit works!
-</p>
+<div class="bs-callout code">
+  <div class="row">
+    <div class="col-xs-12">
+      <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Nazwa</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="description">Opis</label>
+            <input type="text" id="description" class="form-control" formControlName="description">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="imagePath">Obrazek</label>
+            <input type="text" id="imagePath" class="form-control" formControlName="imagePath">
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="font-weight: bold;font-size:15px;">
+        <div class="col-xs-12">
+         <div class="col-sm-3">Ilość</div>
+         <div class="col-sm-3">Budynek</div>
+         <div class="col-sm-3">Sala</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="list-group" formArrayName="locations">
+            <div
+              class="row"
+              *ngFor="let location of itemForm.controls['locations'].controls; let i = index">
+              <div formGroupName="{{i}}">
+                <div class="col-sm-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    formControlName="quantity">
+                </div>
+                <div class="col-sm-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="building">
+                </div>
+                <div class="col-sm-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="room">
+                </div>
+                <div class="col-sm-2">
+                  <button class="btn btn-danger" (click)="onRemoveLocation(i)">X</button>
+                </div>
+          </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="bs-callout bs-callout-primary" style="margin-left: -1%;margin-top: 0%;">
+          <div class="form-group row">
+            <div class="col-md-3"><input type="number" class="form-control" #locationQuantity></div>
+              <div class="col-md-3"><input type="text" class="form-control" #locationBuilding></div>
+              <div class="col-md-3"><input type="text" class="form-control" #locationRoom></div>
+                <div class="col-md-2">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 75%;"
+                    (click)="onAddLocation(locationQuantity.value, locationBuilding.value, locationRoom.value)">+</button>
+               </div>
+          </div>
+        </div>
+      </div>
+ 
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-success" [disabled]="!itemForm.valid">Zapisz</button>
+          <button type="submit" class="btn btn-danger" (click)="onCancel()">Anuluj</button>
+        </div>
+      </div>
+     </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<ul>
+  <li *ngFor="let user of users">{{ user.name }}</li>
+</ul>-->

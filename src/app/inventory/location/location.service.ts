@@ -3,14 +3,25 @@ import { Location } from '../location';
 export class LocationService {
   private locations: Location[] = [];
 
+
   constructor() { }
 
   getLocations() {
-    return this.locations;
+      return this.locations;
   }
 
-  addLocations(locations: Location[]){
+
+  /*addLocations(locations: Location[]){
     Array.prototype.push.apply(this.locations, locations);
+  }*/
+
+  addLocation(location: Location){
+    this.locations.push(location);
+  }
+
+  deleteLocation(location: Location){
+    this.locations.splice(this.locations.indexOf(location), 1);
+    
   }
 
 }
