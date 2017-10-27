@@ -9,10 +9,11 @@ import {
   FormBuilder,
   ReactiveFormsModule 
 } from "@angular/forms";
+import { FileUploader } from 'ng2-file-upload';
+import { FileSelectDirective } from 'ng2-file-upload';
 
 import { InventoryService } from '../inventory.service';//
 import { Item } from '../item';
-
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html'
@@ -25,7 +26,10 @@ export class EditComponent implements OnInit, OnDestroy {
   private item: Item;
   private isNew = true;
   private linkurl: string;
-  
+  private imgurl: string;
+  imgDir = '/assets/images/items/';
+  public uploader:FileUploader = new FileUploader({url: this.imgDir});
+
   constructor(private is: InventoryService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) {  //
     this.is.getUsers()                          //
       .subscribe(res => this.users = res);      //
@@ -82,6 +86,8 @@ export class EditComponent implements OnInit, OnDestroy {
     (<FormArray>this.itemForm.controls['locations']).removeAt(index);
   }
 
+
+
   private initForm(){
     let itemName = '';
     let itemDescription = '';
@@ -103,6 +109,7 @@ export class EditComponent implements OnInit, OnDestroy {
       itemName = this.item.name;
       itemDescription =  this.item.description;
       itemImagePath =  this.item.imagePath;
+      this.imgurl = this.item.imagePath;
     }
 
     this.itemForm = this.formBuilder.group({

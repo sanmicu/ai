@@ -4,7 +4,8 @@ import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { RouterModule, Router, Routes, RouterOutlet } from "@angular/router";
-
+import { Angular2TokenService  } from 'angular2-token';
+import { FileUploader, FileUploadModule, FileSelectDirective } from 'ng2-file-upload';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -35,10 +36,12 @@ import { EditComponent } from './inventory/edit/edit.component';
     DefaultComponent,
     InventoryDefaultComponent,
     EditComponent
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    FileUploadModule,
     HttpModule,
     RouterModule,
     RouterTestingModule,
@@ -46,7 +49,7 @@ import { EditComponent } from './inventory/edit/edit.component';
     RouterModule.forRoot(routes)
 
   ],
-  providers: [InventoryService, LocationService, RouterOutlet, FormBuilder],
+  providers: [InventoryService, LocationService, RouterOutlet, FormBuilder ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
