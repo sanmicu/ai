@@ -42,4 +42,31 @@ router.get('/users', (req, res) => {
     });
 });
 
+router.get('/items', (req, res) => {
+    connection((db) => {
+        db.collection('items')
+            .find()
+            .toArray()
+            .then((items) => {
+                response.data = items;
+                res.json(response);
+            })
+            .catch((err) => {
+                sendError(err, res);
+            });
+    });
+});
+
+router.post('/', (req, res) => {
+    connection((db) => {
+        db.collection('items')
+            .update(req.body, true)
+            .save()
+            .close()
+            .catch((err) => {
+                sendError(err, res);
+            });
+    });
+});
+
 module.exports = router;

@@ -10,11 +10,6 @@ export class LocationService {
       return this.locations;
   }
 
-
-  /*addLocations(locations: Location[]){
-    Array.prototype.push.apply(this.locations, locations);
-  }*/
-
   addLocation(location: Location){
     this.locations.push(location);
   }

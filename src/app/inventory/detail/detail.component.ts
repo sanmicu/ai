@@ -17,15 +17,17 @@ export class DetailComponent implements OnInit, OnDestroy {
   private indexOfLocation: number;
   private subscription: Subscription;
   private result_pom: number;
-  locations: Location[] =[];
-  constructor(private router: Router, private route: ActivatedRoute, private invService: InventoryService, private locService: LocationService) { }
+  
+  constructor(private router: Router, private route: ActivatedRoute, private invService: InventoryService, private locService: LocationService) {
+    
+  }
 
 
   ngOnInit() {   
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         this.itemIndex = params['id'];
-        this.selectedItem = this.invService.getItem(this.itemIndex);
+        this.selectedItem = this.invService.getItem(this.itemIndex); //Znów do obiektów items pobierane są itemy z json'a. Dodatkowo przekazywany jest parametr id.
       }
     )
       
@@ -34,7 +36,6 @@ export class DetailComponent implements OnInit, OnDestroy {
   onEdit(){
     this.router.navigate(['/inwentarz', this.itemIndex, 'edytuj'])
   }
-
 
   onDelete(index: number){
     this.invService.deleteItem(this.selectedItem);

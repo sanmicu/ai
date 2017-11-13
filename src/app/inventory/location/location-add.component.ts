@@ -22,17 +22,20 @@ import { InventoryService } from '../inventory.service';
   templateUrl: './location-add.component.html'
 })
 export class LocationAddComponent implements OnInit {
-  
+  items: Item[];
   selectedItem: Item;
   private item: Item;
   private itemIndex: number;
   private subscription: Subscription;
   locationForm: FormGroup;
- 
   
-  constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute, private locService: LocationService, private invService: InventoryService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute, private locService: LocationService, private invService: InventoryService) {
+    
+
+  }
 
     ngOnInit() {
+      this.items = this.invService.getItems();
       this.subscription = this.route.params.subscribe(
         (params: any) => {
           if (params.hasOwnProperty('id')) {
@@ -64,6 +67,8 @@ export class LocationAddComponent implements OnInit {
   onSubmit(){
     const newItem = this.locationForm.value;
     this.invService.editItem(this.item, newItem);
+    this.invService.postItemsAPI();
+    console.log(this.items);
     
   }
   

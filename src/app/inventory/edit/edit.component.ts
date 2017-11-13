@@ -20,7 +20,6 @@ import { Item } from '../item';
 })
 export class EditComponent implements OnInit, OnDestroy {
   itemForm: FormGroup;
-  users: Array<any>;//
   private subscription: Subscription;
   private itemIndex: number;
   private item: Item;
@@ -30,9 +29,15 @@ export class EditComponent implements OnInit, OnDestroy {
   imgDir = '/assets/images/items/';
   public uploader:FileUploader = new FileUploader({url: this.imgDir});
 
+  users: Array<any>;   //
+  items: Array<any>;  //
+
   constructor(private is: InventoryService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) {  //
-    this.is.getUsers()                          //
-      .subscribe(res => this.users = res);      //
+    this.is.getUsers()       //                  
+      .subscribe(res => this.users = res);      
+
+     this.is.getItemsAPI() //                      
+      .subscribe(res => this.items = res);    
   }
 
   ngOnInit() {

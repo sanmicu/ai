@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Output, OnInit } from '@angular/core';
 import { Item } from '../item';
 import { InventoryService } from '../inventory.service';
 
@@ -6,13 +6,16 @@ import { InventoryService } from '../inventory.service';
   selector: 'app-inventory-list',
   templateUrl: './inventory-list.component.html'
 })
-export class InventoryListComponent implements OnInit {
-  items: Item[] =[];
-  
-  constructor(private inventoryService: InventoryService) { }
-
-  ngOnInit() {
-    this.items = this.inventoryService.getItems();
+export class InventoryListComponent implements OnInit{
+   items: Item[];
+ 
+  constructor(private inventoryService: InventoryService) { 
+    //console.log(this.items);
   }
-  
+
+  ngOnInit(){
+      this.items = this.inventoryService.getItems();
+  }
+
 }
+

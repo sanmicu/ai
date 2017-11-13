@@ -7,7 +7,7 @@ import { Item } from '../item'
 })
 export class InventoryItemComponent  {
   @Input() item: Item;
-  @Input() itemId: number = 1;
+  @Input() _id: number = 1;
 
 
 }
