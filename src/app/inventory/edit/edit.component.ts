@@ -33,11 +33,7 @@ export class EditComponent implements OnInit, OnDestroy {
   items: Array<any>;  //
 
   constructor(private is: InventoryService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) {  //
-    this.is.getUsers()       //                  
-      .subscribe(res => this.users = res);      
-
-     this.is.getItemsAPI() //                      
-      .subscribe(res => this.items = res);    
+   
   }
 
   ngOnInit() {
@@ -60,6 +56,12 @@ export class EditComponent implements OnInit, OnDestroy {
     } else {
       this.is.editItem(this.item, newItem);
     }
+
+   this.is.postItemsAPI().subscribe(
+      data => console.log(data),
+      error => console.error(error)
+    );
+
     this.navigateBack();
   }
 
@@ -67,6 +69,7 @@ export class EditComponent implements OnInit, OnDestroy {
     if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
     this.router.navigate([this.linkurl]);
   }
+
 
   onCancel() {
     this.navigateBack();

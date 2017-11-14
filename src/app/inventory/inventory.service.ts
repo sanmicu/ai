@@ -11,9 +11,7 @@ import 'rxjs/add/operator/map';
 
 export class InventoryService {
   private items: Item[];
-  private send_items;
   result:any;
-
   constructor(private _http: Http) {
      this.getItemsAPI()                       
       .subscribe(res => this.items = res); 
@@ -49,9 +47,13 @@ export class InventoryService {
       .map(result => result.json().data);
     
   }
+
   postItemsAPI() {
-     this.send_items = JSON.stringify(this.items);
-     this._http.post('/api/items',this.send_items).map(result => result.json().data);
+    const body = JSON.stringify(this.items);  
+    const headers = new Headers({
+    'Content-Type': 'application/json'
+    }); 
+    return this._http.post('/api/items', body, {headers: headers});
   }
 
 }

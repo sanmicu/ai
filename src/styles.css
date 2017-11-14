@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+li.saveonserver:hover{
+    background-color: #e7e7e7;
+}
+
 input.add-location{
     border-style:none;
     background-color:transparent;

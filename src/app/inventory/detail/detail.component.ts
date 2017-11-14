@@ -27,7 +27,7 @@ export class DetailComponent implements OnInit, OnDestroy {
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         this.itemIndex = params['id'];
-        this.selectedItem = this.invService.getItem(this.itemIndex); //Znów do obiektów items pobierane są itemy z json'a. Dodatkowo przekazywany jest parametr id.
+        this.selectedItem = this.invService.getItem(this.itemIndex);
       }
     )
       
@@ -39,6 +39,12 @@ export class DetailComponent implements OnInit, OnDestroy {
 
   onDelete(index: number){
     this.invService.deleteItem(this.selectedItem);
+
+    this.invService.postItemsAPI().subscribe(
+      data => console.log(data),
+      error => console.error(error)
+    );
+
     this.router.navigate(['/inwentarz']);
   }
 

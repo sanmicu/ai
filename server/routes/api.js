@@ -57,16 +57,17 @@ router.get('/items', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/items', (req, res) => { 
+    const items = req.body;
     connection((db) => {
-        db.collection('items')
-            .update(req.body, true)
-            .save()
-            .close()
+        db.collection('items').deleteMany({});
+        items.forEach(item => {
+            db.collection('items')
+            .insert(item)
             .catch((err) => {
                 sendError(err, res);
             });
-    });
+        });
+    });    
 });
-
 module.exports = router;
