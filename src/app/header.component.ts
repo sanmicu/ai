@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { InventoryService } from './inventory/inventory.service';
 
 @Component({
   selector: 'app-header',
@@ -7,17 +6,10 @@ import { InventoryService } from './inventory/inventory.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private invService: InventoryService) { }
+  constructor() { }
 
   ngOnInit() {
+ 
   }
-
-  onSave(){
-    this.invService.postItemsAPI().subscribe(
-      data => console.log(data),
-      error => console.error(error)
-    );
-  }
-
 
 }

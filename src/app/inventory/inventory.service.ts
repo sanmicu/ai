@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Item } from './item';
 import { Location } from './location';
 import { ObjectMapper } from 'json-object-mapper';
@@ -9,16 +9,26 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 
-export class InventoryService {
+export class InventoryService implements OnInit {
   private items: Item[];
   result:any;
+
   constructor(private _http: Http) {
-     this.getItemsAPI()                       
+      this.getItemsAPI()                       
       .subscribe(res => this.items = res); 
+
+      
+  }
+
+  ngOnInit(){
+    this.postItemsAPI().subscribe(
+        data => console.log(data),
+        error => console.error(error)
+    );
   }
 
   getItems() {
-    return this.items;
+      return this.items;
   }
 
   getItem(id: number){
@@ -26,6 +36,7 @@ export class InventoryService {
   }
   deleteItem(item: Item){
     this.items.splice(this.items.indexOf(item), 1);
+     return this.items;
   }
 
   addItem(item: Item){
@@ -37,11 +48,6 @@ export class InventoryService {
   }
 
  //Funkcje związanie z API
-  getUsers() {
-    return this._http.get("/api/users")
-      .map(result => this.result = result.json().data);
-  }
-
   getItemsAPI() {
     return this._http.get("/api/items")
       .map(result => result.json().data);
@@ -54,6 +60,8 @@ export class InventoryService {
     'Content-Type': 'application/json'
     }); 
     return this._http.post('/api/items', body, {headers: headers});
+
   }
+
 
 }

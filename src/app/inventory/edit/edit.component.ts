@@ -12,7 +12,7 @@ import {
 import { FileUploader } from 'ng2-file-upload';
 import { FileSelectDirective } from 'ng2-file-upload';
 
-import { InventoryService } from '../inventory.service';//
+import { InventoryService } from '../inventory.service';
 import { Item } from '../item';
 @Component({
   selector: 'app-edit',
@@ -23,15 +23,13 @@ export class EditComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
   private itemIndex: number;
   private item: Item;
+  items: Item[];
   private isNew = true;
   private linkurl: string;
   private imgurl: string;
   imgDir = '/assets/images/items/';
   public uploader:FileUploader = new FileUploader({url: this.imgDir});
-
-  users: Array<any>;   //
-  items: Array<any>;  //
-
+  
   constructor(private is: InventoryService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) {  //
    
   }
@@ -61,6 +59,8 @@ export class EditComponent implements OnInit, OnDestroy {
       data => console.log(data),
       error => console.error(error)
     );
+  
+    this.is.getItems();
 
     this.navigateBack();
   }

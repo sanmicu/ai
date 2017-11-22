@@ -6,6 +6,11 @@ import { DefaultComponent } from './default.component';
 import { InventoryDefaultComponent } from './inventory/inventory-default.component';
 import { DetailComponent } from './inventory/detail/detail.component';
 import { EditComponent } from './inventory/edit/edit.component';
+import { RegisterComponent } from './user/register.component';
+import { LoginComponent } from './user/login.component';
+import { LogoutComponent } from './user/logout.component';
+
+import { AuthGuard } from './user/auth.guard';
 
 export const routes: Routes = [
   { path: '', component: DefaultComponent },
@@ -13,10 +18,13 @@ export const routes: Routes = [
     path: 'inwentarz',
     component: InventoryComponent,
     children: [
-      { path: '', component: InventoryDefaultComponent }, 
-      { path: 'dodaj', component: EditComponent },
-      { path: ':id', component: DetailComponent },
-      { path: ':id/edytuj', component: EditComponent } 
+      { path: '', component: InventoryDefaultComponent, canActivate: [AuthGuard] }, 
+      { path: 'dodaj', component: EditComponent, canActivate: [AuthGuard] },
+      { path: ':id', component: DetailComponent, canActivate: [AuthGuard] },
+      { path: ':id/edytuj', component: EditComponent, canActivate: [AuthGuard] } 
     ]
   },
+  { path: 'rejestracja', component: RegisterComponent},
+  { path: 'logowanie', component: LoginComponent},
+  { path: 'wylogowanie', component: LogoutComponent}
 ];

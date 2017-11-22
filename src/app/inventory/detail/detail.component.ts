@@ -13,13 +13,14 @@ import { InventoryService } from '../inventory.service';
 })
 export class DetailComponent implements OnInit, OnDestroy {
   selectedItem: Item;
+
   private itemIndex: number;
   private indexOfLocation: number;
   private subscription: Subscription;
   private result_pom: number;
   
   constructor(private router: Router, private route: ActivatedRoute, private invService: InventoryService, private locService: LocationService) {
-    
+   
   }
 
 

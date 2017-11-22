@@ -1,0 +1,13 @@
+ <a [routerLink]="['logowanie']">
+  <div *ngIf="!this.isLogged" class="bs-callout bs-callout-info" style="text-align:center;position:center;">
+    <h2 class="display-2">Witaj na stronie Inwentaryzacja sprzętu</h2>
+    <img src="/assets/images/lock.png"  title="Zaloguj się" alt="Zaloguj się">
+    <h3 class="lead">Aby móc korzystać z inwentarza, zaloguj się.</h3>
+  </div>
+</a>
+
+<div *ngIf="this.isLogged" class="bs-callout bs-callout-info" style="text-align:center;position:center;">
+    <h2>Witaj,</h2>
+    <h3>zalogowano jako <b>{{this.user}}.</b></h3><br/>
+    <h4><i>Za pomocą menu nawigacyjnego możesz wybrać co chcesz zrobić.</i></h4>
+</div>

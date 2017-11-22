@@ -6,6 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { RouterModule, Router, Routes, RouterOutlet } from "@angular/router";
 import { Angular2TokenService  } from 'angular2-token';
 import { FileUploader, FileUploadModule, FileSelectDirective } from 'ng2-file-upload';
+import { Md5 } from 'ts-md5/dist/md5';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -21,7 +22,11 @@ import { DefaultComponent } from './default.component';
 import {routes} from './app.routes';
 import { InventoryDefaultComponent } from './inventory/inventory-default.component';
 import { EditComponent } from './inventory/edit/edit.component';
-
+import { RegisterComponent } from './user/register.component';
+import { LoginComponent } from './user/login.component';
+import { UserService } from './user/user.service';
+import { AuthGuard } from './user/auth.guard';
+import { LogoutComponent } from './user/logout.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,10 @@ import { EditComponent } from './inventory/edit/edit.component';
     DropdownDirective,
     DefaultComponent,
     InventoryDefaultComponent,
-    EditComponent
+    EditComponent,
+    RegisterComponent,
+    LoginComponent,
+    LogoutComponent
     
   ],
   imports: [
@@ -49,7 +57,7 @@ import { EditComponent } from './inventory/edit/edit.component';
     RouterModule.forRoot(routes)
 
   ],
-  providers: [InventoryService, LocationService, RouterOutlet, FormBuilder ],
+  providers: [InventoryService, LocationService, UserService, AuthGuard, LoginComponent, RouterOutlet, FormBuilder, Md5],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

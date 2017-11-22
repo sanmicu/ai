@@ -26,7 +26,6 @@ let response = {
     message: null
 };
 
-// Get users
 router.get('/users', (req, res) => {
     connection((db) => {
         db.collection('users')
@@ -40,6 +39,16 @@ router.get('/users', (req, res) => {
                 sendError(err, res);
             });
     });
+});
+
+router.post('/users', (req, res) => { 
+    connection((db) => {
+            db.collection('users')
+            .insert(req.body)//.deleteMany({})//
+            .catch((err) => {
+                sendError(err, res);
+            }) 
+    });    
 });
 
 router.get('/items', (req, res) => {

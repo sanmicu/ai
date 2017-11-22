@@ -22,13 +22,13 @@ import { InventoryService } from '../inventory.service';
   templateUrl: './location-add.component.html'
 })
 export class LocationAddComponent implements OnInit {
-  items: Item[];
   selectedItem: Item;
   private item: Item;
   private itemIndex: number;
   private subscription: Subscription;
   locationForm: FormGroup;
   
+
   constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute, private locService: LocationService, private invService: InventoryService) {
     
   }
@@ -66,11 +66,16 @@ export class LocationAddComponent implements OnInit {
   onSubmit(){
     const newItem = this.locationForm.value;
     this.invService.editItem(this.item, newItem);
+
     this.invService.postItemsAPI().subscribe(
       data => console.log(data),
       error => console.error(error)
     );
-    
+
+    this.invService.getItems();
+
+   this.router.navigate(['inwentarz']);
+
   }
   
    onCancel() {
