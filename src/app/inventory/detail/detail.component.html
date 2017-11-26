@@ -5,8 +5,11 @@
   <div class="col-xs-12">
     <div class="bs-callout bs-callout-warning">
       <h3 style="margin-top:-2%;">{{selectedItem?.name}}</h3>
-      {{selectedItem?.description}}
+      {{selectedItem?.description}}<br/>
     </div>
+  </div>
+  <div class="col-xs-12" style="margin-top: -3%;margin-bottom: 2%;">
+    <i>Ostatnio zmodyfikowany przez {{selectedItem?.lastMod}}</i>
   </div>
 </div>
 <div class="row">

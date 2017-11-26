@@ -1,7 +1,13 @@
-<div class="row" style="padding-bottom: 1%;">
-  <div class="col-xs-12">
-    <a class="btn btn-success" [routerLink]="['dodaj']">Dodaj</a>
+<div class="row">
+  <div class="col-xs-2">
+     <a class="btn btn-success" [routerLink]="['dodaj']">Dodaj</a>
   </div>
+  <div class="col-xs-10" style="margin-top: -1.7%;">
+      <form [formGroup]="searchForm" class="navbar-form navbar-right"  (ngSubmit)="onSearch()">
+      <input formControlName="name" type="text" class="form-control" placeholder="Co szukasz?">
+      <button type="submit" class="btn btn-default">Szukaj</button>
+  </form>
+</div>
 </div>
 <div class="row">
   <div class="col-xs-12">

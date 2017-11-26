@@ -48,7 +48,18 @@ export class EditComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    const newItem = this.itemForm.value;
+     var pom = this.itemForm.controls['name'].value.charAt(0).toUpperCase();;
+      for (var j=1; j<this.itemForm.controls['name'].value.length; j++)
+        pom += this.itemForm.controls['name'].value.charAt(j)
+     this.itemForm.controls['name'].setValue(pom);
+
+     if (this.itemForm.controls['imagePath'].value == '')
+        this.itemForm.controls['imagePath'].setValue("/assets/images/items/none.png");
+
+    const [username, password] = sessionStorage.getItem('currentUser').split('|');
+    this.itemForm.controls['lastMod'].setValue(username);
+
+     const newItem = this.itemForm.value;
     if (this.isNew) {
       this.is.addItem(newItem);
     } else {
@@ -83,8 +94,8 @@ export class EditComponent implements OnInit, OnDestroy {
     (<FormArray>this.itemForm.controls['locations']).push(
       new FormGroup({
         quantity: new FormControl(quantity, [Validators.required, Validators.min(1), Validators.max(1000)]),
-        building: new FormControl(building, Validators.required),
-        room: new FormControl(room, Validators.required),
+        building: new FormControl(building.toUpperCase(), Validators.required),
+        room: new FormControl(room.toUpperCase(), Validators.required),
       })
     );
     
@@ -100,6 +111,7 @@ export class EditComponent implements OnInit, OnDestroy {
     let itemName = '';
     let itemDescription = '';
     let itemImagePath = '';
+    let itemLastMod='';
     let itemLocations: FormArray = new FormArray([]);
     
     if (!this.isNew) {
@@ -114,17 +126,21 @@ export class EditComponent implements OnInit, OnDestroy {
           );
         }
       }  
+
       itemName = this.item.name;
       itemDescription =  this.item.description;
       itemImagePath =  this.item.imagePath;
+      itemLastMod = this.item.lastMod;
+        
       this.imgurl = this.item.imagePath;
     }
 
     this.itemForm = this.formBuilder.group({
       name: [itemName, Validators.required],
       description: [itemDescription, Validators.required],
-      imagePath: [itemImagePath, Validators.required],
-      locations: itemLocations
+      imagePath: [itemImagePath],
+      locations: itemLocations,
+      lastMod: [itemLastMod]
     });
     
     

@@ -66,10 +66,10 @@ export class LoginComponent implements OnInit {
               this.pom = false;
               this.ifSuccess = true;  
               sessionStorage.setItem('currentUser', token);
+              window.location.href='#';
           }
           else {this.ifSuccess = false;}
       }
       passHash = ""; 
-      window.location.href='#';
     }
 }

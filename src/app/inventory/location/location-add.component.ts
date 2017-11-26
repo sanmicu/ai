@@ -52,8 +52,8 @@ export class LocationAddComponent implements OnInit {
     (<FormArray>this.locationForm.controls['locations']).push(
       new FormGroup({
         quantity: new FormControl(quantity, [Validators.required, Validators.min(1), Validators.max(1000)]),
-        building: new FormControl(building, Validators.required),
-        room: new FormControl(room, Validators.required),
+        building: new FormControl(building.toUpperCase(), Validators.required),
+        room: new FormControl(room.toUpperCase(), Validators.required),
       })
     );
   }
@@ -86,6 +86,7 @@ export class LocationAddComponent implements OnInit {
     let itemName = '';
     let itemDescription = '';
     let itemImagePath = '';
+    let itemLastMod='';
     let itemLocations: FormArray = new FormArray([]);
     
     if (this.item.hasOwnProperty('locations')) {
@@ -102,12 +103,16 @@ export class LocationAddComponent implements OnInit {
     itemName = this.item.name;
     itemDescription =  this.item.description;
     itemImagePath =  this.item.imagePath;
+    const [username, password] = sessionStorage.getItem('currentUser').split('|');
+    itemLastMod = username;
 
     this.locationForm = this.formBuilder.group({
       name: [itemName, Validators.required],
       description: [itemDescription, Validators.required],
       imagePath: [itemImagePath, Validators.required],
-      locations: itemLocations
+      locations: itemLocations,
+      lastMod: [itemLastMod]
+
     });
   
   }

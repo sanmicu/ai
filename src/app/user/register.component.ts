@@ -58,6 +58,10 @@ export class RegisterComponent implements OnInit {
             Validators.required,
             this.isEqualPassword.bind(this)
         ])],
+        pin: ['', Validators.compose([
+            Validators.required,
+             this.correctPIN
+        ])],
     });
   }
 
@@ -78,6 +82,12 @@ export class RegisterComponent implements OnInit {
         }
     }
 
+ correctPIN(control: FormControl): {[s: string]: boolean} {
+        if (control.value != 5541) {
+            return {incorrectPIN: true};
+        }
+    }
+
   isLong(control: FormControl): {[s: string]: boolean} {
      if (control.value.length < 7) {
             return {isLong: true};
@@ -95,8 +105,8 @@ export class RegisterComponent implements OnInit {
         this.registeredUser = this.signupForm.controls['login'].value;
         this.md5.start();
         this.signupForm.controls['password'].setValue(this.md5.appendStr(this.signupForm.controls['password'].value).end());
-        this.signupForm.controls['confirmPassword'].setValue(this.signupForm.controls['password'].value);
-
+        this.signupForm.controls['confirmPassword'].setValue("OK");
+        this.signupForm.controls['pin'].setValue("OK");
         var only_once = true;
         if (only_once){
         this.us.registerUserAPI(this.signupForm.value).subscribe(
@@ -109,6 +119,7 @@ export class RegisterComponent implements OnInit {
         //this.users = this.us.getUsers();
         this.signupForm.controls['password'].setValue("");
         this.signupForm.controls['confirmPassword'].setValue("");
+        this.signupForm.controls['pin'].setValue("");
 
         this.ifSuccess = true;
     }
