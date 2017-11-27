@@ -44,6 +44,7 @@ export class InventoryListComponent implements OnInit{
              var linkurl = 'inwentarz/' + i;
              this.router.navigate([linkurl]);
           }
+
    }
 
 }

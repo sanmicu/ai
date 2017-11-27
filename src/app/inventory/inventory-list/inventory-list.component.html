@@ -3,10 +3,10 @@
      <a class="btn btn-success" [routerLink]="['dodaj']">Dodaj</a>
   </div>
   <div class="col-xs-10" style="margin-top: -1.7%;">
-      <form [formGroup]="searchForm" class="navbar-form navbar-right"  (ngSubmit)="onSearch()">
+    <form [formGroup]="searchForm" class="navbar-form navbar-right"  (ngSubmit)="onSearch()">
       <input formControlName="name" type="text" class="form-control" placeholder="Co szukasz?">
       <button type="submit" class="btn btn-default">Szukaj</button>
-  </form>
+    </form>
 </div>
 </div>
 <div class="row">

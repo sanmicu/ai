@@ -7,6 +7,7 @@ import { RouterModule, Router, Routes, RouterOutlet } from "@angular/router";
 import { Angular2TokenService  } from 'angular2-token';
 import { FileUploader, FileUploadModule, FileSelectDirective } from 'ng2-file-upload';
 import { Md5 } from 'ts-md5/dist/md5';
+import {AgmCoreModule} from 'angular2-google-maps/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -54,7 +55,8 @@ import { LogoutComponent } from './user/logout.component';
     RouterModule,
     RouterTestingModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({apiKey: 'AIzaSyBdk0PDffbHCf0Q3Rb5R6TuwIcnSRNDjHo'})
 
   ],
   providers: [InventoryService, LocationService, UserService, AuthGuard, LoginComponent, RouterOutlet, FormBuilder, Md5],

@@ -9,8 +9,7 @@ import {
   FormBuilder,
   ReactiveFormsModule 
 } from "@angular/forms";
-import { FileUploader } from 'ng2-file-upload';
-import { FileSelectDirective } from 'ng2-file-upload';
+
 
 import { InventoryService } from '../inventory.service';
 import { Item } from '../item';
@@ -27,8 +26,7 @@ export class EditComponent implements OnInit, OnDestroy {
   private isNew = true;
   private linkurl: string;
   private imgurl: string;
-  imgDir = '/assets/images/items/';
-  public uploader:FileUploader = new FileUploader({url: this.imgDir});
+  filesToUpload: Array<File> = [];
   
   constructor(private is: InventoryService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) {  //
    
@@ -53,7 +51,7 @@ export class EditComponent implements OnInit, OnDestroy {
         pom += this.itemForm.controls['name'].value.charAt(j)
      this.itemForm.controls['name'].setValue(pom);
 
-     if (this.itemForm.controls['imagePath'].value == '')
+     if (this.itemForm.controls['imagePath'].value == (null || ''))
         this.itemForm.controls['imagePath'].setValue("/assets/images/items/none.png");
 
     const [username, password] = sessionStorage.getItem('currentUser').split('|');
@@ -106,7 +104,6 @@ export class EditComponent implements OnInit, OnDestroy {
   }
 
 
-
   private initForm(){
     let itemName = '';
     let itemDescription = '';
@@ -131,8 +128,8 @@ export class EditComponent implements OnInit, OnDestroy {
       itemDescription =  this.item.description;
       itemImagePath =  this.item.imagePath;
       itemLastMod = this.item.lastMod;
-        
-      this.imgurl = this.item.imagePath;
+      this.imgurl =  this.item.imagePath;
+
     }
 
     this.itemForm = this.formBuilder.group({
@@ -142,8 +139,8 @@ export class EditComponent implements OnInit, OnDestroy {
       locations: itemLocations,
       lastMod: [itemLastMod]
     });
-    
-    
   }
+
+
 }
      

@@ -109,10 +109,10 @@ export class RegisterComponent implements OnInit {
         this.signupForm.controls['pin'].setValue("OK");
         var only_once = true;
         if (only_once){
-        this.us.registerUserAPI(this.signupForm.value).subscribe(
-            data => console.log(data),
-            error => console.error(error)
-        );  
+            this.us.registerUserAPI(this.signupForm.value).subscribe(
+                data => console.log(data),
+                error => console.error(error)
+            );  
         }
         only_once = false;
 
