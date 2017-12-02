@@ -9,6 +9,7 @@ import {
   FormBuilder,
   ReactiveFormsModule 
 } from "@angular/forms";
+import { Http, Headers, RequestOptions } from '@angular/http';
 
 
 import { InventoryService } from '../inventory.service';
@@ -18,91 +19,125 @@ import { Item } from '../item';
   templateUrl: './edit.component.html'
 })
 export class EditComponent implements OnInit, OnDestroy {
-  itemForm: FormGroup;
-  private subscription: Subscription;
-  private itemIndex: number;
-  private item: Item;
-  items: Item[];
-  private isNew = true;
-  private linkurl: string;
-  private imgurl: string;
-  filesToUpload: Array<File> = [];
-  
-  constructor(private is: InventoryService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder) {  //
-   
-  }
+    itemForm: FormGroup;
+    private subscription: Subscription;
+    private itemIndex: number;
+    private item: Item;
+    items: Item[];
+    private isNew = true;
+    private linkurl: string;
+    private imgurl: string;
+    filesToUpload: Array<File> = [];
+    imagePom: any;
+    private isImgSelected = false;
 
-  ngOnInit() {
-    this.subscription = this.route.params.subscribe(
-      (params: any) => {
-        if (params.hasOwnProperty('id')) {
-          this.isNew = false;
-          this.itemIndex = params['id'];
-          this.item = this.is.getItem(this.itemIndex);
-        } else {this.isNew = true;this.item=null}
-        this.initForm();
-      }
-    );
-  }
-
-  onSubmit() {
-     var pom = this.itemForm.controls['name'].value.charAt(0).toUpperCase();;
-      for (var j=1; j<this.itemForm.controls['name'].value.length; j++)
-        pom += this.itemForm.controls['name'].value.charAt(j)
-     this.itemForm.controls['name'].setValue(pom);
-
-     if (this.itemForm.controls['imagePath'].value == (null || ''))
-        this.itemForm.controls['imagePath'].setValue("/assets/images/items/none.png");
-
-    const [username, password] = sessionStorage.getItem('currentUser').split('|');
-    this.itemForm.controls['lastMod'].setValue(username);
-
-     const newItem = this.itemForm.value;
-    if (this.isNew) {
-      this.is.addItem(newItem);
-    } else {
-      this.is.editItem(this.item, newItem);
+    constructor(private is: InventoryService, private route: ActivatedRoute, private router: Router, private formBuilder: FormBuilder, private _http: Http) {  //
+    
     }
 
-   this.is.postItemsAPI().subscribe(
-      data => console.log(data),
-      error => console.error(error)
-    );
+    ngOnInit() {
+      this.subscription = this.route.params.subscribe(
+        (params: any) => {
+          if (params.hasOwnProperty('id')) {
+            this.isNew = false;
+            this.itemIndex = params['id'];
+            this.item = this.is.getItem(this.itemIndex);
+          } else {this.isNew = true;this.item=null}
+          this.initForm();
+        }
+      );
+    }
+
+    onSubmit() {
+      var pom = this.itemForm.controls['name'].value.charAt(0).toUpperCase();;
+        for (var j=1; j<this.itemForm.controls['name'].value.length; j++)
+          pom += this.itemForm.controls['name'].value.charAt(j)
+      this.itemForm.controls['name'].setValue(pom);
+
+      if (this.itemForm.controls['imagePath'].value == (null || ''))
+          this.itemForm.controls['imagePath'].setValue("/assets/images/items/none.png");
+
+      const [username, password] = sessionStorage.getItem('currentUser').split('|');
+      this.itemForm.controls['lastMod'].setValue(username);
+      
+      if(this.isImgSelected){
+        this.upload();
+        if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
+        sessionStorage.setItem('uploadedImg', this.linkurl);
+        this.itemForm.controls['imagePath'].setValue("/assets/images/items/" + this.imgurl);
+        window.location.href='#';
+      }
+
+      const newItem = this.itemForm.value;
+      if (this.isNew) {
+        this.is.addItem(newItem);
+      } else {
+        this.is.editItem(this.item, newItem);
+      }
+
+      this.is.postItemsAPI().subscribe(
+        data => console.log(data),
+        error => console.error(error)
+      );
+      
+      this.is.getItems();
+      this.navigateBack();
+
   
-    this.is.getItems();
+      
+    }
 
-    this.navigateBack();
-  }
+    private navigateBack() {
+      if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
+      this.router.navigate([this.linkurl]);
 
-  private navigateBack() {
-    if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
-    this.router.navigate([this.linkurl]);
-  }
+    }
 
 
-  onCancel() {
-    this.navigateBack();
-  }
+    onCancel() {
+      this.navigateBack();
+    }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
+    ngOnDestroy() {
+      this.subscription.unsubscribe();
+    }
 
-  onAddLocation(quantity: number, building: string, room: string) {
-    (<FormArray>this.itemForm.controls['locations']).push(
-      new FormGroup({
-        quantity: new FormControl(quantity, [Validators.required, Validators.min(1), Validators.max(1000)]),
-        building: new FormControl(building.toUpperCase(), Validators.required),
-        room: new FormControl(room.toUpperCase(), Validators.required),
-      })
-    );
-    
-  }
+    onAddLocation(quantity: number, building: string, room: string) {
+      (<FormArray>this.itemForm.controls['locations']).push(
+        new FormGroup({
+          quantity: new FormControl(quantity, [Validators.required, Validators.min(1), Validators.max(1000)]),
+          building: new FormControl(building.toUpperCase(), Validators.required),
+          room: new FormControl(room.toUpperCase(), Validators.required),
+        })
+      );
+      
+    }
 
-  onRemoveLocation(index: number) {
-    (<FormArray>this.itemForm.controls['locations']).removeAt(index);
-  }
+    onRemoveLocation(index: number) {
+      (<FormArray>this.itemForm.controls['locations']).removeAt(index);
+    }
 
+
+    upload() {
+      const formData: any = new FormData();
+      const files: Array<File> = this.filesToUpload;
+
+      this.imgurl = Date.now() + files[0]['name'];
+
+      formData.append("uploads[]", files[0], this.imgurl);
+      console.log(this.imgurl);
+
+      this._http.post('/api/upload', formData)
+        .map(files => files.json())
+        .subscribe(files => console.log('files', files));
+      //
+      }
+
+      fileChangeEvent(fileInput: any) {
+        this.filesToUpload = <Array<File>>fileInput.target.files;
+        this.imagePom = fileInput.target.files[0]['name'];
+        this.isImgSelected = true;
+    }
 
   private initForm(){
     let itemName = '';
@@ -140,7 +175,6 @@ export class EditComponent implements OnInit, OnDestroy {
       lastMod: [itemLastMod]
     });
   }
-
 
 }
      

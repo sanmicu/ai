@@ -10,7 +10,6 @@ import { User } from './user';
 @Injectable()
 export class AuthGuard implements CanActivate {
   private users: User[]; 
-  private users2: User[]; 
   pom: boolean = false;
 
   constructor(private router: Router, private md5:Md5, private us:UserService, private _http: Http) {

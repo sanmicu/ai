@@ -34,16 +34,19 @@
                 <div class="col-sm-3">
                   <label for="imagePath">Obrazek</label>
                   <img src="{{imgurl}}" img class="img-responsive" style="max-height:150px;">
+                  <br/>
                 </div>
                       
-                <div class="col-sm-5" style="margin-bottom: 2%;">
+                <div class="col-sm-3" style="margin-bottom: 2%;">
                   <label class="btn btn-default" for="imagePath1">
-                    <input type="file" (change)="fileChangeEvent($event)" id="imagePath1" style="display:none;">
+                    <input type="file" (change)="fileChangeEvent($event)" id="imagePath1" style="display:none;"/>
                     Wybierz...
-                  </label>
-                  <button type="button" class="btn btn-info" (click)="upload()">Gotowe</button>
+                  </label>      
                 </div>
-                <input type="text" name="imagePath" id="imagePath" class="form-control" formControlName="imagePath">
+                <div class="col-sm-6" *ngIf="this.isImgSelected">
+                    <div class="bs-callout bs-callout-success" style="margin-top:-5%;">Wybrano <b>nowe</b> zdjęcie. Aby było widoczne, zapisz zmiany.</div>
+                </div>
+               <!-- <input type="text" name="imagePath" id="imagePath" class="form-control" formControlName="imagePath">-->
             </div>
           </div>       
       </div>

@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
+var multer = require('multer');
 
 // Connect
 const connection = (closure) => {
    // return MongoClient.connect('mongodb://localhost:27017/inventory', (err, db) => {
     return MongoClient.connect('mongodb://admin:fragiL9@ds121716.mlab.com:21716/inwentarz', (err, db) => {
         if (err) return console.log(err);
-
         closure(db);
     });
 };
@@ -80,4 +80,25 @@ router.post('/items', (req, res) => {
         });
     });    
 });
+
+
+var storage = multer.diskStorage({
+  // destino del fichero
+  destination: function (req, file, cb) {
+    cb(null, './src/assets/images/items/')
+  },
+  // renombrar fichero
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
+
+var upload = multer({ storage: storage });
+
+router.post('/upload', upload.array("uploads[]", 1),  function (req, res) {
+  console.log('files', req.files);
+  res.send(req.files);
+});
+
+
 module.exports = router;

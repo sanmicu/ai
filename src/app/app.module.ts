@@ -8,6 +8,7 @@ import { Angular2TokenService  } from 'angular2-token';
 import { FileUploader, FileUploadModule, FileSelectDirective } from 'ng2-file-upload';
 import { Md5 } from 'ts-md5/dist/md5';
 import {AgmCoreModule} from 'angular2-google-maps/core';
+import {GoogleChart} from 'angular2-google-chart/directives/angular2-google-chart.directive';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
@@ -28,6 +29,7 @@ import { LoginComponent } from './user/login.component';
 import { UserService } from './user/user.service';
 import { AuthGuard } from './user/auth.guard';
 import { LogoutComponent } from './user/logout.component';
+import { SummaryComponent } from './inventory/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { LogoutComponent } from './user/logout.component';
     EditComponent,
     RegisterComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    SummaryComponent,
+    GoogleChart
     
   ],
   imports: [

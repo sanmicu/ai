@@ -21,10 +21,10 @@ export class InventoryListComponent implements OnInit{
   constructor(private fb: FormBuilder, private router: Router, private iS: InventoryService) { 
      this.items = this.iS.getItems();
 
-     this.iS.postItemsAPI().subscribe(
-      data => console.log(data),
-      error => console.error(error)
-    );
+     //this.iS.postItemsAPI().subscribe(
+    //  data => console.log(data),
+    //  error => console.error(error)
+    //);
 
      this.items = this.iS.getItems();
      //console.log('push');
