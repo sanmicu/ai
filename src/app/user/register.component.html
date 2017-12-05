@@ -1,6 +1,6 @@
 <h2 *ngIf="!this.isLogged">Rejestracja</h2>
 
-<div *ngIf="!this.isLogged" class="bs-callout bs-callout-primary" style="max-width: 50%;">
+<div *ngIf="!this.isLogged" class="bs-callout bs-callout-primary" style="max-width: 600px;">
     <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
         <div class="form-group">
             <label for="login">Login</label>
@@ -22,13 +22,13 @@
     </form>
  </div>
 
-<div *ngIf="!this.pom;" class="alert alert-success" style="max-width: 50%;">
+<div *ngIf="!this.pom;" class="alert alert-success" style="max-width: 600px;">
         <strong>Sukces!</strong> Teraz możesz się <a [routerLink]="['../logowanie']">zalogować</a> z loginem {{this.registeredUser}}.
 </div>
-<div *ngIf="!this.ifSuccess" class="alert alert-danger" style="max-width: 50%;">
+<div *ngIf="!this.ifSuccess" class="alert alert-danger" style="max-width: 600px;">
         <strong>Niepowodzenie!</strong> Login jest już zajęty.
 </div>
-<div *ngIf="this.isLogged" class="alert alert-info" style="max-width: 50%;">
+<div *ngIf="this.isLogged" class="alert alert-info" style="max-width: 600px;">
         <strong>Uwaga!</strong> Jesteś już zalogowany jako {{this.isLoggedAs}}. Jeśli to nie Ty, <a [routerLink]="['../wylogowanie']">wyloguj się.</a>
 </div>
 

@@ -1,6 +1,6 @@
 <h2 *ngIf="!this.isLogged">Logowanie</h2>
 
-<div *ngIf="!this.isLogged" class="bs-callout bs-callout-primary" style="max-width: 50%;">
+<div *ngIf="!this.isLogged" class="bs-callout bs-callout-primary" style="max-width: 600px;">
   <form [formGroup]="signupForm" (ngSubmit)="onSignin()">
       <div class="form-group">
           <label for="login">Login</label>
@@ -14,12 +14,12 @@
   </form>
 </div>
 
-<div *ngIf="!this.pom;" class="alert alert-success" style="max-width: 50%;">
+<div *ngIf="!this.pom;" class="alert alert-success" style="max-width: 600px;">
         <strong>Sukces!</strong> Zalogowano pomyślnie.
 </div>
-<div *ngIf="!this.ifSuccess && this.pom" class="alert alert-danger" style="max-width: 50%;">
+<div *ngIf="!this.ifSuccess && this.pom" class="alert alert-danger" style="max-width: 600px;">
         <strong>Niepowodzenie!</strong> Niepoprawny login/hasło.
 </div>
-<div *ngIf="this.isLogged" class="alert alert-info" style="max-width: 50%;">
+<div *ngIf="this.isLogged" class="alert alert-info" style="max-width: 600px;">
         <strong>Uwaga!</strong> Jesteś już zalogowany jako {{this.isLoggedAs}}. Jeśli to nie Ty, <a [routerLink]="['../wylogowanie']">wyloguj się.</a>
 </div>

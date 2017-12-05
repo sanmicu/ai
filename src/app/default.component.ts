@@ -17,18 +17,7 @@ export class DefaultComponent{
        this.isLogged = true;
       }
 
-       if (sessionStorage.getItem('uploadedImg')) this.isImgUploaded = true;
   }
-
-  @HostListener('mousemove')  onmousemove(){
-     //console.log('moved');
-     if (sessionStorage.getItem('uploadedImg')){
-      this.router.navigate([sessionStorage.getItem('uploadedImg')]);   
-      sessionStorage.removeItem('uploadedImg');
-      //this.isImgUploaded = true;
-     }
-  }
-
 
 }
 

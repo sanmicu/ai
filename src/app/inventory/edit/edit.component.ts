@@ -62,10 +62,9 @@ export class EditComponent implements OnInit, OnDestroy {
       
       if(this.isImgSelected){
         this.upload();
-        if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
-        sessionStorage.setItem('uploadedImg', this.linkurl);
+        //if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
         this.itemForm.controls['imagePath'].setValue("/assets/images/items/" + this.imgurl);
-        window.location.href='#';
+        //window.location.href='#';
       }
 
       const newItem = this.itemForm.value;
