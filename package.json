@@ -4,8 +4,11 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+<<<<<<< HEAD
     "start": "ng build --prod --aot & node server.js",
     "start1": "ng serve --proxy-config proxy.conf.json",
+=======
+>>>>>>> release
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

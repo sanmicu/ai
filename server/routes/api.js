@@ -85,7 +85,6 @@ router.post('/items', (req, res) => {
 var storage = multer.diskStorage({
   // destino del fichero
   destination: function (req, file, cb) {
-    cb(null, './dist/assets/images/items/')
   },
   // renombrar fichero
   filename: function (req, file, cb) {
