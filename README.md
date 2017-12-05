@@ -1,6 +1,7 @@
 # Inwentaryzacja sprzętu posiadanego przez pracownika
 
 Projekt powstał w ramach przedmiotu Aplikacje internetowe. 
+https://inwentarz.herokuapp.com
 
 ## Opis
 
