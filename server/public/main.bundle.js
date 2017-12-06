@@ -326,7 +326,6 @@ var FooterComponent = (function () {
     function FooterComponent() {
     }
     FooterComponent.prototype.ngOnInit = function () {
-        console.log('tteest');
     };
     return FooterComponent;
 }());
@@ -1136,6 +1135,7 @@ var EditComponent = (function () {
             //if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
             this.itemForm.controls['imagePath'].setValue("/assets/images/items/" + this.imgurl);
             //window.location.href='#';
+            this.router.navigate(['/']);
         }
         var newItem = this.itemForm.value;
         if (this.isNew) {
@@ -1176,7 +1176,7 @@ var EditComponent = (function () {
         var files = this.filesToUpload;
         this.imgurl = Date.now() + files[0]['name'];
         formData.append("uploads[]", files[0], this.imgurl);
-        console.log(this.imgurl);
+        //console.log(this.imgurl);
         this._http.post('/api/upload', formData)
             .map(function (files) { return files.json(); })
             .subscribe(function (files) { return console.log('files', files); });

@@ -65,6 +65,7 @@ export class EditComponent implements OnInit, OnDestroy {
         //if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
         this.itemForm.controls['imagePath'].setValue("/assets/images/items/" + this.imgurl);
         //window.location.href='#';
+        this.router.navigate(['/']);
       }
 
       const newItem = this.itemForm.value;
@@ -80,6 +81,7 @@ export class EditComponent implements OnInit, OnDestroy {
       );
       
       this.is.getItems();
+      
       this.navigateBack();
 
   
@@ -124,7 +126,7 @@ export class EditComponent implements OnInit, OnDestroy {
       this.imgurl = Date.now() + files[0]['name'];
 
       formData.append("uploads[]", files[0], this.imgurl);
-      console.log(this.imgurl);
+      //console.log(this.imgurl);
 
       this._http.post('/api/upload', formData)
         .map(files => files.json())
