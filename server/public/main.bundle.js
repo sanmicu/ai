@@ -22,7 +22,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(142);
 
 
 
@@ -67,7 +67,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
-        template: __webpack_require__(208)
+        template: __webpack_require__(209)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__inventory_inventory_service__["a" /* InventoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__inventory_inventory_service__["a" /* InventoryService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__user_user_service__["a" /* UserService */]) === "function" && _b || Object])
 ], AppComponent);
@@ -87,20 +87,20 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router_testing__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_file_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_file_upload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ts_md5_dist_md5__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ts_md5_dist_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ts_md5_dist_md5__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_google_maps_core__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_google_maps_core__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_google_maps_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angular2_google_maps_core__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular2_google_chart_directives_angular2_google_chart_directive__ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__header_component__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__header_component__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__inventory_inventory_component__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__inventory_inventory_list_inventory_list_component__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__inventory_inventory_list_inventory_item_component__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__inventory_inventory_list_inventory_list_component__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__inventory_inventory_list_inventory_item_component__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__inventory_detail_detail_component__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__inventory_location_location_add_component__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__inventory_location_location_add_component__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__dropdown_directive__ = __webpack_require__(135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__inventory_inventory_service__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__inventory_location_location_service__ = __webpack_require__(43);
@@ -114,6 +114,7 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__user_auth_guard__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__user_logout_component__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__inventory_summary_summary_component__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__footer_component__ = __webpack_require__(136);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -121,6 +122,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -174,7 +176,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_25__user_login_component__["a" /* LoginComponent */],
             __WEBPACK_IMPORTED_MODULE_28__user_logout_component__["a" /* LogoutComponent */],
             __WEBPACK_IMPORTED_MODULE_29__inventory_summary_summary_component__["a" /* SummaryComponent */],
-            __WEBPACK_IMPORTED_MODULE_9_angular2_google_chart_directives_angular2_google_chart_directive__["a" /* GoogleChart */]
+            __WEBPACK_IMPORTED_MODULE_9_angular2_google_chart_directives_angular2_google_chart_directive__["a" /* GoogleChart */],
+            __WEBPACK_IMPORTED_MODULE_30__footer_component__["a" /* FooterComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -308,6 +311,42 @@ DropdownDirective = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FooterComponent = (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+        console.log('tteest');
+    };
+    return FooterComponent;
+}());
+FooterComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-footer',
+        template: __webpack_require__(211)
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
+
+//# sourceMappingURL=footer.component.js.map
+
+/***/ }),
+
+/***/ 137:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -329,7 +368,7 @@ var HeaderComponent = (function () {
 HeaderComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-header',
-        template: __webpack_require__(210)
+        template: __webpack_require__(212)
     }),
     __metadata("design:paramtypes", [])
 ], HeaderComponent);
@@ -338,12 +377,12 @@ HeaderComponent = __decorate([
 
 /***/ }),
 
-/***/ 137:
+/***/ 138:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__item__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__item__ = __webpack_require__(140);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InventoryItemComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -373,8 +412,9 @@ __decorate([
 InventoryItemComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-inventory-item',
-        template: __webpack_require__(213)
-    })
+        template: __webpack_require__(215)
+    }),
+    __metadata("design:paramtypes", [])
 ], InventoryItemComponent);
 
 var _a;
@@ -382,7 +422,7 @@ var _a;
 
 /***/ }),
 
-/***/ 138:
+/***/ 139:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -435,7 +475,7 @@ var InventoryListComponent = (function () {
 InventoryListComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-inventory-list',
-        template: __webpack_require__(214)
+        template: __webpack_require__(216)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__inventory_service__["a" /* InventoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__inventory_service__["a" /* InventoryService */]) === "function" && _c || Object])
 ], InventoryListComponent);
@@ -445,7 +485,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 139:
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -465,7 +505,7 @@ var Item = (function () {
 
 /***/ }),
 
-/***/ 140:
+/***/ 141:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -647,7 +687,7 @@ var LocationAddComponent = (function () {
 LocationAddComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-locations',
-        template: __webpack_require__(216)
+        template: __webpack_require__(218)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["m" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["m" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__location_service__["a" /* LocationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__location_service__["a" /* LocationService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__inventory_service__["a" /* InventoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__inventory_service__["a" /* InventoryService */]) === "function" && _e || Object])
 ], LocationAddComponent);
@@ -657,7 +697,7 @@ var _a, _b, _c, _d, _e;
 
 /***/ }),
 
-/***/ 141:
+/***/ 142:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -745,87 +785,94 @@ var _a;
 
 /***/ }),
 
-/***/ 208:
-/***/ (function(module, exports) {
-
-module.exports = "<app-header></app-header>\r\n\r\n<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
-
-/***/ }),
-
 /***/ 209:
 /***/ (function(module, exports) {
 
-module.exports = " <a [routerLink]=\"['logowanie']\">\r\n  <div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2 class=\"display-2\">Witaj na stronie Inwentaryzacja sprzętu</h2>\r\n    <img src=\"/assets/images/lock.png\"  title=\"Zaloguj się\" alt=\"Zaloguj się\">\r\n    <h3 class=\"lead\">Aby móc korzystać z inwentarza, zaloguj się.</h3>\r\n  </div>\r\n</a>\r\n\r\n<div *ngIf=\"this.isLogged\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2>Witaj,</h2>\r\n    <h3>zalogowano jako <b>{{this.user}}.</b></h3><br/>\r\n    <h4><i>Za pomocą menu nawigacyjnego możesz wybrać, co chcesz zrobić.</i></h4>\r\n</div>"
+module.exports = "<app-header></app-header>\r\n\r\n<div class=\"container\">\r\n    <router-outlet></router-outlet>\r\n</div>"
 
 /***/ }),
 
 /***/ 210:
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n      <a href=\"./\"><img src=\"/assets/images/logo.jpg\" class=\"img-responsive\" alt=\"Inwentaryzacja\"/></a>\r\n    </div>\r\n\r\n    <!-- Collect the nav links, forms, and other content for toggling -->\r\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li class=\"dropdown\" dropdown>\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Sprzęt <span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">\r\n            <li><a [routerLink]=\"['inwentarz/dodaj']\">Dodaj</a></li>\r\n            <li><a [routerLink]=\"['inwentarz']\">Przeglądaj</a></li>\r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li><a [routerLink]=\"['zestawienie']\">Zestawienie</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n     <ul class=\"nav navbar-nav navbar-right\">\r\n        <li class=\"dropdown\" dropdown>\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Użytkownik<span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">\r\n            <li><a [routerLink]=\"['logowanie']\">Logowanie</a></li>\r\n            <li><a [routerLink]=\"['rejestracja']\">Rejestracja</a></li>\r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li><a [routerLink]=\"['wylogowanie']\">Wyloguj</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div><!-- /.navbar-collapse -->\r\n  </div><!-- /.container-fluid -->\r\n</nav>\r\n"
+module.exports = " <a [routerLink]=\"['logowanie']\">\r\n  <div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2 class=\"display-2\">Witaj na stronie Inwentaryzacja sprzętu</h2>\r\n    <img src=\"/assets/images/lock.png\"  title=\"Zaloguj się\" alt=\"Zaloguj się\">\r\n    <h3 class=\"lead\">Aby móc korzystać z inwentarza, zaloguj się.</h3>\r\n  </div>\r\n</a>\r\n\r\n<div *ngIf=\"this.isLogged\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2>Witaj,</h2>\r\n    <h3>zalogowano jako <b>{{this.user}}.</b></h3><br/>\r\n    <h4><i>Za pomocą menu nawigacyjnego możesz wybrać, co chcesz zrobić.</i></h4>\r\n</div>\r\n\r\n<app-footer></app-footer>"
 
 /***/ }),
 
 /***/ 211:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-8\">\r\n    <div class=\"bs-callout bs-callout-warning\">\r\n      <h3 style=\"margin-top:-2%;\">{{selectedItem?.name}}</h3>\r\n      {{selectedItem?.description}}<br/>\r\n    </div>\r\n    <div style=\"margin-top: 2%;margin-bottom: 2%;\">\r\n      <i>Ostatnio zmodyfikowany przez {{selectedItem?.lastMod}}</i>\r\n    </div>\r\n    <div>\r\n      <button class=\"btn btn-success\" (click)=\"onEdit()\">Edytuj</button>\r\n      <button class=\"btn btn-danger\" (click)=\"onDelete(i)\">Usuń</button>\r\n    </div>\r\n  </div>\r\n    <div class=\"col-xs-4\" style=\"margin-top:3.5%;\">\r\n    <img src=\"{{selectedItem?.imagePath}}\" class=\"img-responsive\" style=\"max-height:200px;\">\r\n  </div>\r\n</div>\r\n<hr/>\r\n\r\n<app-locations></app-locations>\r\n\r\n\r\n"
+module.exports = "<div id=\"footer\" class=\"navbar navbar-fixed-bottom\" style=\"\r\n    font-size: 13px;\r\n    line-height: 18px;\r\n    background-color: #fff;\r\n    border-color:#e7e7e7;\r\n    padding-top: 15px;\r\n    text-align: center;\r\n    bottom: 0;\r\n    \">\r\n   Powered by <a href=\"mailto:michalpsliwka@gmail.com\" style=\"text-decoration: underline;\">Michał Śliwka</a></div>"
 
 /***/ }),
 
 /***/ 212:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"bs-callout code\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n      <form [formGroup]=\"itemForm\" (ngSubmit)=\"onSubmit()\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <div class=\"form-group\">\r\n            <label for=\"name\">Nazwa</label>\r\n            <input type=\"text\" id=\"name\" class=\"form-control\" formControlName=\"name\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <div class=\"form-group\">\r\n            <label for=\"description\">Opis</label>\r\n            <input type=\"text\" id=\"description\" class=\"form-control\" formControlName=\"description\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\" style=\"\r\n                              background-color: rgb(248,248,248);\r\n                              padding-bottom: 1%;\r\n                              border-style:dotted;\r\n                              border-width: 2px;\r\n                              border-radius: 5px;\r\n                              border-color:  rgb(91,192,222);\r\n                              \"> \r\n          <div class=\"col-xs-12\">\r\n            <div class=\"form-group\">\r\n              <br/>\r\n                <div class=\"col-sm-3\">\r\n                  <label for=\"imagePath\">Obrazek</label>\r\n                  <img src=\"{{imgurl}}\" img class=\"img-responsive\" style=\"max-height:150px;\">\r\n                  <br/>\r\n                </div>\r\n                      \r\n                <div class=\"col-sm-3\" style=\"margin-bottom: 2%;\">\r\n                  <label class=\"btn btn-default\" for=\"imagePath1\">\r\n                    <input type=\"file\" (change)=\"fileChangeEvent($event)\" id=\"imagePath1\" style=\"display:none;\"/>\r\n                    Wybierz...\r\n                  </label>      \r\n                </div>\r\n                <div class=\"col-sm-6\" *ngIf=\"this.isImgSelected\">\r\n                    <div class=\"bs-callout bs-callout-success\" style=\"margin-top:-5%;\">Wybrano <b>nowe</b> zdjęcie. Aby było widoczne, zapisz zmiany.</div>\r\n                </div>\r\n               <!-- <input type=\"text\" name=\"imagePath\" id=\"imagePath\" class=\"form-control\" formControlName=\"imagePath\">-->\r\n            </div>\r\n          </div>       \r\n      </div>\r\n\r\n      <br/>\r\n      <div class=\"row\" style=\"font-weight: bold;font-size:15px;\">\r\n        <div class=\"col-xs-12\">\r\n         <div class=\"col-sm-3\">Ilość</div>\r\n         <div class=\"col-sm-3\">Budynek</div>\r\n         <div class=\"col-sm-3\">Sala</div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <ul class=\"list-group\" formArrayName=\"locations\">\r\n            <div\r\n              class=\"row\"\r\n              *ngFor=\"let location of itemForm.controls['locations'].controls; let i = index\">\r\n              <div formGroupName=\"{{i}}\">\r\n                <div class=\"col-sm-3\">\r\n                  <input\r\n                    type=\"number\"\r\n                    class=\"form-control\"\r\n                    formControlName=\"quantity\">\r\n                </div>\r\n                <div class=\"col-sm-3\">\r\n                  <input\r\n                    type=\"text\"\r\n                    class=\"form-control\"\r\n                    formControlName=\"building\">\r\n                </div>\r\n                <div class=\"col-sm-3\">\r\n                  <input\r\n                    type=\"text\"\r\n                    class=\"form-control\"\r\n                    formControlName=\"room\">\r\n                </div>\r\n                <div class=\"col-sm-2\">\r\n                  <button class=\"btn btn-danger\" (click)=\"onRemoveLocation(i)\">X</button>\r\n                </div>\r\n          </div>\r\n            </div>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n     \r\n      <div class=\"row\">\r\n        <div class=\"bs-callout bs-callout-primary\" style=\"margin-left: -1%;margin-top: 0%;\">\r\n          <div class=\"form-group row\">\r\n            <div class=\"col-md-3\"><input type=\"number\" class=\"form-control\" #locationQuantity></div>\r\n              <div class=\"col-md-3\"><input type=\"text\" class=\"form-control\" #locationBuilding></div>\r\n              <div class=\"col-md-3\"><input type=\"text\" class=\"form-control\" #locationRoom></div>\r\n                <div class=\"col-md-2\">\r\n                  <button\r\n                    type=\"button\"\r\n                    class=\"btn btn-primary\"\r\n                    style=\"width: 75%;\"\r\n                    (click)=\"onAddLocation(locationQuantity.value, locationBuilding.value, locationRoom.value)\">+</button>\r\n               </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n \r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!itemForm.valid\">Zapisz</button>\r\n          <button type=\"submit\" class=\"btn btn-info\" (click)=\"onCancel()\">Anuluj</button>\r\n        </div>\r\n      </div>\r\n     </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<nav class=\"navbar navbar-default\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n      <a href=\"./\"><img src=\"/assets/images/logo.jpg\" class=\"img-responsive\" alt=\"Inwentaryzacja\"/></a>\r\n    </div>\r\n\r\n    <!-- Collect the nav links, forms, and other content for toggling -->\r\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li class=\"dropdown\" dropdown>\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Sprzęt <span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">\r\n            <li><a [routerLink]=\"['inwentarz/dodaj']\">Dodaj</a></li>\r\n            <li><a [routerLink]=\"['inwentarz']\">Przeglądaj</a></li>\r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li><a [routerLink]=\"['zestawienie']\">Zestawienie</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n     <ul class=\"nav navbar-nav navbar-right\">\r\n        <li class=\"dropdown\" dropdown>\r\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Użytkownik<span class=\"caret\"></span></a>\r\n          <ul class=\"dropdown-menu\">\r\n            <li><a [routerLink]=\"['logowanie']\">Logowanie</a></li>\r\n            <li><a [routerLink]=\"['rejestracja']\">Rejestracja</a></li>\r\n            <li role=\"separator\" class=\"divider\"></li>\r\n            <li><a [routerLink]=\"['wylogowanie']\">Wyloguj</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div><!-- /.navbar-collapse -->\r\n  </div><!-- /.container-fluid -->\r\n</nav>\r\n"
 
 /***/ }),
 
 /***/ 213:
 /***/ (function(module, exports) {
 
-module.exports = "<a [routerLink]=_id class=\"list-group-item clearfix\" style=\"margin-bottom: 1%;\" routerLinkActive=\"active\">\r\n  <span class=\"pull-left\">\r\n    <h3 class=\"list-group-item-heading\">{{item.name}}</h3>\r\n    <div *ngIf=\"item.description.length>45;then short else normal\"></div>\r\n    <ng-template #short><p><em>{{item.description | slice:0:45}}(...)</em></p></ng-template>\r\n    <ng-template #normal><p><em>{{item.description}}</em></p></ng-template>\r\n  </span>\r\n  <span class=\"pull-right\">\r\n    <img src=\"{{item.imagePath}}\" class=\"img-responsive\" style=\"max-height: 50px;\"/>\r\n  </span>\r\n</a>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-8\">\r\n    <div class=\"bs-callout bs-callout-warning\">\r\n      <h3 style=\"margin-top:-2%;\">{{selectedItem?.name}}</h3>\r\n      {{selectedItem?.description}}<br/>\r\n    </div>\r\n    <div style=\"margin-top: 2%;margin-bottom: 2%;\">\r\n      <i>Ostatnio zmodyfikowany przez {{selectedItem?.lastMod}}</i>\r\n    </div>\r\n    <div>\r\n      <button class=\"btn btn-success\" (click)=\"onEdit()\">Edytuj</button>\r\n      <button class=\"btn btn-danger\" (click)=\"onDelete(i)\">Usuń</button>\r\n    </div>\r\n  </div>\r\n    <div class=\"col-xs-4\" style=\"margin-top:3.5%;\">\r\n    <img src=\"{{selectedItem?.imagePath}}\" class=\"img-responsive\" style=\"max-height:200px;\">\r\n  </div>\r\n</div>\r\n<hr/>\r\n\r\n<app-locations></app-locations>\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ 214:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-2\">\r\n     <a class=\"btn btn-success\" [routerLink]=\"['dodaj']\">Dodaj</a>\r\n  </div>\r\n  <div class=\"col-xs-10\" style=\"margin-top: -1.7%;\">\r\n    <form [formGroup]=\"searchForm\" class=\"navbar-form navbar-right\"  (ngSubmit)=\"onSearch()\">\r\n      <input formControlName=\"name\" type=\"text\" class=\"form-control\" placeholder=\"Co szukasz?\">\r\n      <button type=\"submit\" class=\"btn btn-default\">Szukaj</button>\r\n    </form>\r\n</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <ul class=\"list-group\">\r\n      <app-inventory-item *ngFor=\"let item of items; let i = index\" [item]=\"item\" [_id]=\"i\"></app-inventory-item>\r\n    </ul>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"bs-callout code\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n      <form [formGroup]=\"itemForm\" (ngSubmit)=\"onSubmit()\">\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <div class=\"form-group\">\r\n            <label for=\"name\">Nazwa</label>\r\n            <input type=\"text\" id=\"name\" class=\"form-control\" formControlName=\"name\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <div class=\"form-group\">\r\n            <label for=\"description\">Opis</label>\r\n            <input type=\"text\" id=\"description\" class=\"form-control\" formControlName=\"description\">\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\" style=\"\r\n                              background-color: rgb(248,248,248);\r\n                              padding-bottom: 1%;\r\n                              border-style:dotted;\r\n                              border-width: 2px;\r\n                              border-radius: 5px;\r\n                              border-color:  rgb(91,192,222);\r\n                              \"> \r\n          <div class=\"col-xs-12\">\r\n            <div class=\"form-group\">\r\n              <br/>\r\n                <div class=\"col-sm-3\">\r\n                  <label for=\"imagePath\">Obrazek</label>\r\n                  <img src=\"{{imgurl}}\" img class=\"img-responsive\" style=\"max-height:150px;\">\r\n                  <br/>\r\n                </div>\r\n                      \r\n                <div class=\"col-sm-3\" style=\"margin-bottom: 2%;\">\r\n                  <label class=\"btn btn-default\" for=\"imagePath1\">\r\n                    <input type=\"file\" (change)=\"fileChangeEvent($event)\" id=\"imagePath1\" style=\"display:none;\"/>\r\n                    Wybierz...\r\n                  </label>      \r\n                </div>\r\n                <div class=\"col-sm-6\" *ngIf=\"this.isImgSelected\">\r\n                    <div class=\"bs-callout bs-callout-success\" style=\"margin-top:-5%;\">Wybrano <b>nowe</b> zdjęcie. Aby było widoczne, zapisz zmiany.</div>\r\n                </div>\r\n               <!-- <input type=\"text\" name=\"imagePath\" id=\"imagePath\" class=\"form-control\" formControlName=\"imagePath\">-->\r\n            </div>\r\n          </div>       \r\n      </div>\r\n\r\n      <br/>\r\n      <div class=\"row\" style=\"font-weight: bold;font-size:15px;\">\r\n        <div class=\"col-xs-12\">\r\n         <div class=\"col-sm-3\">Ilość</div>\r\n         <div class=\"col-sm-3\">Budynek</div>\r\n         <div class=\"col-sm-3\">Sala</div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <ul class=\"list-group\" formArrayName=\"locations\">\r\n            <div\r\n              class=\"row\"\r\n              *ngFor=\"let location of itemForm.controls['locations'].controls; let i = index\">\r\n              <div formGroupName=\"{{i}}\">\r\n                <div class=\"col-sm-3\">\r\n                  <input\r\n                    type=\"number\"\r\n                    class=\"form-control\"\r\n                    formControlName=\"quantity\">\r\n                </div>\r\n                <div class=\"col-sm-3\">\r\n                  <input\r\n                    type=\"text\"\r\n                    class=\"form-control\"\r\n                    formControlName=\"building\">\r\n                </div>\r\n                <div class=\"col-sm-3\">\r\n                  <input\r\n                    type=\"text\"\r\n                    class=\"form-control\"\r\n                    formControlName=\"room\">\r\n                </div>\r\n                <div class=\"col-sm-2\">\r\n                  <button class=\"btn btn-danger\" (click)=\"onRemoveLocation(i)\">X</button>\r\n                </div>\r\n          </div>\r\n            </div>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n     \r\n      <div class=\"row\">\r\n        <div class=\"bs-callout bs-callout-primary\" style=\"margin-left: -1%;margin-top: 0%;\">\r\n          <div class=\"form-group row\">\r\n            <div class=\"col-md-3\"><input type=\"number\" class=\"form-control\" #locationQuantity></div>\r\n              <div class=\"col-md-3\"><input type=\"text\" class=\"form-control\" #locationBuilding></div>\r\n              <div class=\"col-md-3\"><input type=\"text\" class=\"form-control\" #locationRoom></div>\r\n                <div class=\"col-md-2\">\r\n                  <button\r\n                    type=\"button\"\r\n                    class=\"btn btn-primary\"\r\n                    style=\"width: 75%;\"\r\n                    (click)=\"onAddLocation(locationQuantity.value, locationBuilding.value, locationRoom.value)\">+</button>\r\n               </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n \r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-xs-12\">\r\n          <button type=\"submit\" class=\"btn btn-success\" [disabled]=\"!itemForm.valid\">Zapisz</button>\r\n          <button type=\"submit\" class=\"btn btn-info\" (click)=\"onCancel()\">Anuluj</button>\r\n        </div>\r\n      </div>\r\n     </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ 215:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-5\">\r\n    <app-inventory-list></app-inventory-list>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>"
+module.exports = "<a [routerLink]=_id class=\"list-group-item clearfix\" style=\"margin-bottom: 1%;\" routerLinkActive=\"active\">\r\n  <span class=\"pull-left\">\r\n    <h3 class=\"list-group-item-heading\">{{item.name}}</h3>\r\n    <div *ngIf=\"item.description.length>45;then short else normal\"></div>\r\n    <ng-template #short><p><em>{{item.description | slice:0:45}}(...)</em></p></ng-template>\r\n    <ng-template #normal><p><em>{{item.description}}</em></p></ng-template>\r\n  </span>\r\n  <span class=\"pull-right\">\r\n    <img src=\"{{item.imagePath}}\" class=\"img-responsive\" style=\"max-height: 50px;\"/>\r\n  </span>\r\n</a>"
 
 /***/ }),
 
 /***/ 216:
 /***/ (function(module, exports) {
 
-module.exports = "<sebm-google-map \r\n      [latitude]=\"lat\"\r\n      [longitude]=\"lng\"\r\n      [zoom]=\"zoom\"\r\n      [disableDefaultUI]=\"false\"\r\n      [zoomControl]=\"false\"\r\n      (mapClick)=\"mapClicked($event)\"\r\n      style=\"height: 230px;width:80%;\">\r\n    \r\n      <sebm-google-map-marker \r\n          *ngFor=\"let m of markers; let i = index\"\r\n          (markerClick)=\"clickedMarker(m.label, i)\"\r\n          [latitude]=\"m.lat\"\r\n          [longitude]=\"m.lng\">\r\n        <sebm-google-map-info-window>\r\n          <strong>{{m.label}}</strong>\r\n        </sebm-google-map-info-window> \r\n      </sebm-google-map-marker>\r\n     \r\n</sebm-google-map>\r\n<br/>\r\n<!--\r\n<ul>\r\n    <li *ngFor=\"let location of item.locations\">{{ location.building }}</li>\r\n </ul>\r\n-->\r\n<form [formGroup]=\"locationForm\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\"> \r\n        <table class=\"table table-striped table-hover\" style=\"max-width: 60%;cursor:pointer;\">\r\n          <thead>\r\n            <tr>\r\n              <th>Ilość</th>\r\n              <th>Budynek</th>\r\n              <th>Sala</th>        \r\n            </tr>\r\n          </thead>\r\n          <tbody class=\"list-group\" formArrayName=\"locations\" *ngFor=\"let location of locationForm.controls['locations'].controls; let i = index\">\r\n              <tr formGroupName=\"{{i}}\">\r\n                <td>\r\n                  <input\r\n                    class=\"add-location\"\r\n                    formControlName=\"quantity\"\r\n                    disabled\r\n                    >\r\n                </td>\r\n                <td>\r\n                  <input\r\n                    class=\"add-location\"\r\n                    formControlName=\"building\"\r\n                    disabled>\r\n                </td>\r\n                <td style=\"width:30%;\">\r\n                  <input   \r\n                    class=\"add-location\"\r\n                    formControlName=\"room\"\r\n                    disabled>\r\n                </td>\r\n                <button class=\"btn btn-danger\" style=\"margin-top:5%;\" (click)=\"onRemoveLocation(i)\">X</button>      \r\n             </tr>\r\n          </tbody>\r\n      </table>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"bs-callout bs-callout-default\" style=\"max-width: 70%;\">\r\n        <div class=\"row\">\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"quantity\">Ilość</label>\r\n            <input \r\n              type=\"number\"\r\n              id=\"quantity\"\r\n              required\r\n              class=\"form-control\"\r\n              #locationQuantity     \r\n              >\r\n          </div>\r\n\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"building\">Budynek</label>\r\n            <input\r\n              type=\"text\"\r\n              id=\"building\"\r\n              required\r\n              class=\"form-control\"\r\n              #locationBuilding      \r\n              >\r\n          </div>\r\n\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"room\">Sala</label>\r\n            <input \r\n              type=\"text\"\r\n              id=\"room\"\r\n              required\r\n              class=\"form-control\"\r\n              #locationRoom\r\n              >\r\n          </div>\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"add\" style=\"color:white;\">Add</label>\r\n              <button class=\"btn btn-success\" type=\"button\"  (click)=\"onAddLocation(locationQuantity.value, locationBuilding.value, locationRoom.value)\">Dodaj</button>\r\n          </div>\r\n        </div>\r\n          \r\n      \r\n    </div>  \r\n  </div>\r\n  <div class=\"row\" style=\"margin-bottom: 5%;\">\r\n    <div class=\"col-xs-12\">       \r\n      <button class=\"btn btn-success\" type=\"submit\" [disabled]=\"!locationForm.valid\" (click)=\"onSubmit()\">Zapisz</button>\r\n      <button class=\"btn btn-info\" type=\"button\" (click)=\"onCancel()\">Powrót</button>\r\n    </div>\r\n  </div> \r\n</form> "
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-2\">\r\n     <a class=\"btn btn-success\" [routerLink]=\"['dodaj']\">Dodaj</a>\r\n  </div>\r\n  <div class=\"col-xs-10\" style=\"margin-top: -1.7%;\">\r\n    <form [formGroup]=\"searchForm\" class=\"navbar-form navbar-right\"  (ngSubmit)=\"onSearch()\">\r\n      <input formControlName=\"name\" type=\"text\" class=\"form-control\" placeholder=\"Co szukasz?\">\r\n      <button type=\"submit\" class=\"btn btn-default\">Szukaj</button>\r\n    </form>\r\n</div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <ul class=\"list-group\">\r\n      <app-inventory-item *ngFor=\"let item of items; let i = index\" [item]=\"item\" [_id]=\"i\"></app-inventory-item>\r\n    </ul>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
 /***/ 217:
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Wybierz budynek:</h2>\r\n<div class=\"well\">\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('A')\"><b><h4>A</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('B')\"><b><h4>B</h4></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('C')\"><b><h4>C</h4></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('D')\"><b><h4>D</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('E')\"><b><h4>E</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('F')\"><b><h4>F</h4></b></button> \r\n</div>\r\n<div *ngIf=\"this.selected\" class=\"bs-callout bs-callout-default\">\r\n  <div [chartData]=\"pie_ChartData\" [chartOptions] = \"pie_ChartOptions\" chartType=\"PieChart\" (click)=\"this.selected = false\" GoogleChart></div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-5\">\r\n    <app-inventory-list></app-inventory-list>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
 /***/ 218:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 *ngIf=\"!this.isLogged\">Logowanie</h2>\r\n\r\n<div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-primary\" style=\"max-width: 600px;\">\r\n  <form [formGroup]=\"signupForm\" (ngSubmit)=\"onSignin()\">\r\n      <div class=\"form-group\">\r\n          <label for=\"login\">Login</label>\r\n          <input formControlName=\"login\" type=\"text\" id=\"login\"  #login class=\"form-control\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label for=\"password\">Hasło</label>\r\n          <input formControlName=\"password\" type=\"password\" id=\"password\" #password class=\"form-control\">\r\n      </div>\r\n      <button type=\"submit\" [disabled]=\"!signupForm.valid || !this.pom\" class=\"btn btn-primary\">Zaloguj</button>\r\n  </form>\r\n</div>\r\n\r\n<div *ngIf=\"!this.pom;\" class=\"alert alert-success\" style=\"max-width: 600px;\">\r\n        <strong>Sukces!</strong> Zalogowano pomyślnie.\r\n</div>\r\n<div *ngIf=\"!this.ifSuccess && this.pom\" class=\"alert alert-danger\" style=\"max-width: 600px;\">\r\n        <strong>Niepowodzenie!</strong> Niepoprawny login/hasło.\r\n</div>\r\n<div *ngIf=\"this.isLogged\" class=\"alert alert-info\" style=\"max-width: 600px;\">\r\n        <strong>Uwaga!</strong> Jesteś już zalogowany jako {{this.isLoggedAs}}. Jeśli to nie Ty, <a [routerLink]=\"['../wylogowanie']\">wyloguj się.</a>\r\n</div>\r\n"
+module.exports = "<sebm-google-map \r\n      [latitude]=\"lat\"\r\n      [longitude]=\"lng\"\r\n      [zoom]=\"zoom\"\r\n      [disableDefaultUI]=\"false\"\r\n      [zoomControl]=\"false\"\r\n      (mapClick)=\"mapClicked($event)\"\r\n      style=\"height: 230px;width:80%;\">\r\n    \r\n      <sebm-google-map-marker \r\n          *ngFor=\"let m of markers; let i = index\"\r\n          (markerClick)=\"clickedMarker(m.label, i)\"\r\n          [latitude]=\"m.lat\"\r\n          [longitude]=\"m.lng\">\r\n        <sebm-google-map-info-window>\r\n          <strong>{{m.label}}</strong>\r\n        </sebm-google-map-info-window> \r\n      </sebm-google-map-marker>\r\n     \r\n</sebm-google-map>\r\n<br/>\r\n<!--\r\n<ul>\r\n    <li *ngFor=\"let location of item.locations\">{{ location.building }}</li>\r\n </ul>\r\n-->\r\n<form [formGroup]=\"locationForm\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\"> \r\n        <table class=\"table table-striped table-hover\" style=\"max-width: 60%;cursor:pointer;\">\r\n          <thead>\r\n            <tr>\r\n              <th>Ilość</th>\r\n              <th>Budynek</th>\r\n              <th>Sala</th>        \r\n            </tr>\r\n          </thead>\r\n          <tbody class=\"list-group\" formArrayName=\"locations\" *ngFor=\"let location of locationForm.controls['locations'].controls; let i = index\">\r\n              <tr formGroupName=\"{{i}}\">\r\n                <td>\r\n                  <input\r\n                    class=\"add-location\"\r\n                    formControlName=\"quantity\"\r\n                    disabled\r\n                    >\r\n                </td>\r\n                <td>\r\n                  <input\r\n                    class=\"add-location\"\r\n                    formControlName=\"building\"\r\n                    disabled>\r\n                </td>\r\n                <td style=\"width:30%;\">\r\n                  <input   \r\n                    class=\"add-location\"\r\n                    formControlName=\"room\"\r\n                    disabled>\r\n                </td>\r\n                <button class=\"btn btn-danger\" style=\"margin-top:5%;\" (click)=\"onRemoveLocation(i)\">X</button>      \r\n             </tr>\r\n          </tbody>\r\n      </table>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"bs-callout bs-callout-default\" style=\"max-width: 70%;\">\r\n        <div class=\"row\">\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"quantity\">Ilość</label>\r\n            <input \r\n              type=\"number\"\r\n              id=\"quantity\"\r\n              required\r\n              class=\"form-control\"\r\n              #locationQuantity     \r\n              >\r\n          </div>\r\n\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"building\">Budynek</label>\r\n            <input\r\n              type=\"text\"\r\n              id=\"building\"\r\n              required\r\n              class=\"form-control\"\r\n              #locationBuilding      \r\n              >\r\n          </div>\r\n\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"room\">Sala</label>\r\n            <input \r\n              type=\"text\"\r\n              id=\"room\"\r\n              required\r\n              class=\"form-control\"\r\n              #locationRoom\r\n              >\r\n          </div>\r\n          <div class=\"col-sm-3 form-group\">\r\n            <label for=\"add\" style=\"color:white;\">Add</label>\r\n              <button class=\"btn btn-success\" type=\"button\"  (click)=\"onAddLocation(locationQuantity.value, locationBuilding.value, locationRoom.value)\">Dodaj</button>\r\n          </div>\r\n        </div>\r\n          \r\n      \r\n    </div>  \r\n  </div>\r\n  <div class=\"row\" style=\"margin-bottom: 5%;\">\r\n    <div class=\"col-xs-12\">       \r\n      <button class=\"btn btn-success\" type=\"submit\" [disabled]=\"!locationForm.valid\" (click)=\"onSubmit()\">Zapisz</button>\r\n      <button class=\"btn btn-info\" type=\"button\" (click)=\"onCancel()\">Powrót</button>\r\n    </div>\r\n  </div> \r\n</form> "
 
 /***/ }),
 
 /***/ 219:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 *ngIf=\"!this.isLogged\">Rejestracja</h2>\r\n\r\n<div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-primary\" style=\"max-width: 600px;\">\r\n    <form [formGroup]=\"signupForm\" (ngSubmit)=\"onSignup()\">\r\n        <div class=\"form-group\">\r\n            <label for=\"login\">Login</label>\r\n            <input formControlName=\"login\" type=\"text\" id=\"login\" placeholder='minimum 7 znaków, bez znaków specjalnych' #login class=\"form-control\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Hasło</label>\r\n            <input formControlName=\"password\" type=\"password\" id=\"password\" placeholder='minimum 7 znaków' #password class=\"form-control\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"confirm-password\">Potwierdź hasło</label>\r\n            <input formControlName=\"confirmPassword\" type=\"password\" id=\"confirm-password\" #confirmPassword class=\"form-control\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"pin\">PIN</label>\r\n            <input formControlName=\"pin\" type=\"number\" ng-maxlength=\"4\" id=\"pin\" #pin placeholder='4-PIN' class=\"form-control\" style=\"-webkit-text-security: square;font-size:17px;max-width:17.5%;\">\r\n        </div>\r\n        <button type=\"submit\" [disabled]=\"!signupForm.valid || !this.pom\" class=\"btn btn-primary\">Zarejestruj</button>\r\n    </form>\r\n </div>\r\n\r\n<div *ngIf=\"!this.pom;\" class=\"alert alert-success\" style=\"max-width: 600px;\">\r\n        <strong>Sukces!</strong> Teraz możesz się <a [routerLink]=\"['../logowanie']\">zalogować</a> z loginem {{this.registeredUser}}.\r\n</div>\r\n<div *ngIf=\"!this.ifSuccess\" class=\"alert alert-danger\" style=\"max-width: 600px;\">\r\n        <strong>Niepowodzenie!</strong> Login jest już zajęty.\r\n</div>\r\n<div *ngIf=\"this.isLogged\" class=\"alert alert-info\" style=\"max-width: 600px;\">\r\n        <strong>Uwaga!</strong> Jesteś już zalogowany jako {{this.isLoggedAs}}. Jeśli to nie Ty, <a [routerLink]=\"['../wylogowanie']\">wyloguj się.</a>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<h2>Wybierz budynek:</h2>\r\n<div class=\"well\">\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('A')\"><b><h4>A</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('B')\"><b><h4>B</h4></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('C')\"><b><h4>C</h4></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('D')\"><b><h4>D</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('E')\"><b><h4>E</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('F')\"><b><h4>F</h4></b></button> \r\n</div>\r\n<div *ngIf=\"this.selected\" class=\"bs-callout bs-callout-default\">\r\n  <div [chartData]=\"pie_ChartData\" [chartOptions] = \"pie_ChartOptions\" chartType=\"PieChart\" (click)=\"this.selected = false\" GoogleChart></div>\r\n</div>\r\n<app-footer></app-footer>\r\n\r\n"
+
+/***/ }),
+
+/***/ 220:
+/***/ (function(module, exports) {
+
+module.exports = "<h2 *ngIf=\"!this.isLogged\">Logowanie</h2>\r\n\r\n<div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-primary\" style=\"max-width: 600px;\">\r\n  <form [formGroup]=\"signupForm\" (ngSubmit)=\"onSignin()\">\r\n      <div class=\"form-group\">\r\n          <label for=\"login\">Login</label>\r\n          <input formControlName=\"login\" type=\"text\" id=\"login\"  #login class=\"form-control\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label for=\"password\">Hasło</label>\r\n          <input formControlName=\"password\" type=\"password\" id=\"password\" #password class=\"form-control\">\r\n      </div>\r\n      <button type=\"submit\" [disabled]=\"!signupForm.valid || !this.pom\" class=\"btn btn-primary\">Zaloguj</button>\r\n  </form>\r\n</div>\r\n\r\n<div *ngIf=\"!this.pom;\" class=\"alert alert-success\" style=\"max-width: 600px;\">\r\n        <strong>Sukces!</strong> Zalogowano pomyślnie.\r\n</div>\r\n<div *ngIf=\"!this.ifSuccess && this.pom\" class=\"alert alert-danger\" style=\"max-width: 600px;\">\r\n        <strong>Niepowodzenie!</strong> Niepoprawny login/hasło.\r\n</div>\r\n<div *ngIf=\"this.isLogged\" class=\"alert alert-info\" style=\"max-width: 600px;\">\r\n        <strong>Uwaga!</strong> Jesteś już zalogowany jako {{this.isLoggedAs}}. Jeśli to nie Ty, <a [routerLink]=\"['../wylogowanie']\">wyloguj się.</a>\r\n</div>\r\n<app-footer></app-footer>\r\n"
+
+/***/ }),
+
+/***/ 221:
+/***/ (function(module, exports) {
+
+module.exports = "<h2 *ngIf=\"!this.isLogged\">Rejestracja</h2>\r\n\r\n<div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-primary\" style=\"max-width: 600px;\">\r\n    <form [formGroup]=\"signupForm\" (ngSubmit)=\"onSignup()\">\r\n        <div class=\"form-group\">\r\n            <label for=\"login\">Login</label>\r\n            <input formControlName=\"login\" type=\"text\" id=\"login\" placeholder='minimum 7 znaków, bez znaków specjalnych' #login class=\"form-control\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Hasło</label>\r\n            <input formControlName=\"password\" type=\"password\" id=\"password\" placeholder='minimum 7 znaków' #password class=\"form-control\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"confirm-password\">Potwierdź hasło</label>\r\n            <input formControlName=\"confirmPassword\" type=\"password\" id=\"confirm-password\" #confirmPassword class=\"form-control\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"pin\">PIN</label>\r\n            <input formControlName=\"pin\" type=\"number\" ng-maxlength=\"4\" id=\"pin\" #pin placeholder='4-PIN' class=\"form-control\" style=\"-webkit-text-security: square;font-size:17px;max-width:17.5%;\">\r\n        </div>\r\n        <button type=\"submit\" [disabled]=\"!signupForm.valid || !this.pom\" class=\"btn btn-primary\">Zarejestruj</button>\r\n    </form>\r\n </div>\r\n\r\n<div *ngIf=\"!this.pom;\" class=\"alert alert-success\" style=\"max-width: 600px;\">\r\n        <strong>Sukces!</strong> Teraz możesz się <a [routerLink]=\"['../logowanie']\">zalogować</a> z loginem {{this.registeredUser}}.\r\n</div>\r\n<div *ngIf=\"!this.ifSuccess\" class=\"alert alert-danger\" style=\"max-width: 600px;\">\r\n        <strong>Niepowodzenie!</strong> Login jest już zajęty.\r\n</div>\r\n<div *ngIf=\"this.isLogged\" class=\"alert alert-info\" style=\"max-width: 600px;\">\r\n        <strong>Uwaga!</strong> Jesteś już zalogowany jako {{this.isLoggedAs}}. Jeśli to nie Ty, <a [routerLink]=\"['../wylogowanie']\">wyloguj się.</a>\r\n</div>\r\n<app-footer></app-footer>\r\n\r\n"
 
 /***/ }),
 
@@ -884,7 +931,7 @@ var _a;
 
 /***/ }),
 
-/***/ 257:
+/***/ 259:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(124);
@@ -952,7 +999,7 @@ var DefaultComponent = (function () {
 DefaultComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-default',
-        template: __webpack_require__(209)
+        template: __webpack_require__(210)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object])
 ], DefaultComponent);
@@ -1014,7 +1061,7 @@ var DetailComponent = (function () {
 DetailComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-detail',
-        template: __webpack_require__(211)
+        template: __webpack_require__(213)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["m" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["m" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__inventory_service__["a" /* InventoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__inventory_service__["a" /* InventoryService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__location_location_service__["a" /* LocationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__location_location_service__["a" /* LocationService */]) === "function" && _d || Object])
 ], DetailComponent);
@@ -1175,7 +1222,7 @@ var EditComponent = (function () {
 EditComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-edit',
-        template: __webpack_require__(212)
+        template: __webpack_require__(214)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__inventory_service__["a" /* InventoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__inventory_service__["a" /* InventoryService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["m" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["m" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormBuilder */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _e || Object])
 ], EditComponent);
@@ -1226,6 +1273,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 var InventoryComponent = (function () {
     function InventoryComponent() {
@@ -1235,8 +1285,9 @@ var InventoryComponent = (function () {
 InventoryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-inventory',
-        template: __webpack_require__(215)
-    })
+        template: __webpack_require__(217)
+    }),
+    __metadata("design:paramtypes", [])
 ], InventoryComponent);
 
 //# sourceMappingURL=inventory.component.js.map
@@ -1299,8 +1350,8 @@ var SummaryComponent = (function () {
         this.pie_ChartData = [['Nazwa', 'Ilość']];
         this.pie_ChartOptions = {
             title: 'Zestawienie dla budynku ' + b,
-            width: 900,
-            height: 500
+            width: 800,
+            height: 400
         };
         for (var i = 0; i < this.pom_array.length; i++) {
             var singleItem = [this.pom_array[i].name, this.pom_array[i].quantity];
@@ -1315,7 +1366,7 @@ var SummaryComponent = (function () {
 SummaryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-summary',
-        template: __webpack_require__(217)
+        template: __webpack_require__(219)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__inventory_service__["a" /* InventoryService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__inventory_service__["a" /* InventoryService */]) === "function" && _a || Object])
 ], SummaryComponent);
@@ -1399,7 +1450,7 @@ var _a, _b, _c, _d;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ts_md5_dist_md5__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ts_md5_dist_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ts_md5_dist_md5__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_debounceTime__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user_service__ = __webpack_require__(24);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
@@ -1476,7 +1527,7 @@ var LoginComponent = (function () {
 LoginComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
-        template: __webpack_require__(218)
+        template: __webpack_require__(220)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ts_md5_dist_md5__["Md5"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ts_md5_dist_md5__["Md5"]) === "function" && _c || Object])
 ], LoginComponent);
@@ -1646,7 +1697,7 @@ var RegisterComponent = (function () {
 RegisterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-register',
-        template: __webpack_require__(219)
+        template: __webpack_require__(221)
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__user_service__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ts_md5_dist_md5__["Md5"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ts_md5_dist_md5__["Md5"]) === "function" && _c || Object])
 ], RegisterComponent);
@@ -1656,5 +1707,5 @@ var _a, _b, _c;
 
 /***/ })
 
-},[257]);
+},[259]);
 //# sourceMappingURL=main.bundle.js.map

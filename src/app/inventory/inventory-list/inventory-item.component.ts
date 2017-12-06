@@ -9,5 +9,8 @@ export class InventoryItemComponent  {
   @Input() item: Item;
   @Input() _id: number = 1;
 
+  constructor(){
+  }
+
 
 }

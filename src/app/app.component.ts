@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { Item } from './inventory/item';
 import { InventoryService } from './inventory/inventory.service';
 import { User } from './user/user';
@@ -17,6 +18,5 @@ constructor(private inventoryService: InventoryService, private userService: Use
     this.users = this.userService.getUsers();
   }
 
-  
   
 }

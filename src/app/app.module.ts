@@ -30,6 +30,7 @@ import { UserService } from './user/user.service';
 import { AuthGuard } from './user/auth.guard';
 import { LogoutComponent } from './user/logout.component';
 import { SummaryComponent } from './inventory/summary/summary.component';
+import { FooterComponent } from './footer.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { SummaryComponent } from './inventory/summary/summary.component';
     LoginComponent,
     LogoutComponent,
     SummaryComponent,
-    GoogleChart
+    GoogleChart,
+    FooterComponent
     
   ],
   imports: [
