@@ -6,10 +6,14 @@
   </div>
 </a>
 
-<div *ngIf="this.isLogged" class="bs-callout bs-callout-info" style="text-align:center;position:center;">
+<div *ngIf="this.isLogged && !this.isImgUploaded" class="bs-callout bs-callout-info" style="text-align:center;position:center;">
     <h2>Witaj,</h2>
     <h3>zalogowano jako <b>{{this.user}}.</b></h3><br/>
     <h4><i>Za pomocą menu nawigacyjnego możesz wybrać, co chcesz zrobić.</i></h4>
+</div>
+
+<div *ngIf="this.isImgUploaded" class="bs-callout bs-callout-info" style="text-align:center;position:center;">
+    <h3>Zdjęcie zostało pomyślnie zuploadowane</h3>
 </div>
 
 <app-footer></app-footer>

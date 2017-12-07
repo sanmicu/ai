@@ -19,6 +19,15 @@ export class DefaultComponent{
 
   }
 
+  ngOnInit(){
+    if (sessionStorage.getItem('img')){
+          this.router.navigate([sessionStorage.getItem('img')]);
+          sessionStorage.removeItem('img');
+          this.isImgUploaded = true;
+    }
+
+  }
+
 }
 
 

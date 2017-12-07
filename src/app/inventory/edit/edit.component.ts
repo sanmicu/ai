@@ -65,7 +65,6 @@ export class EditComponent implements OnInit, OnDestroy {
         //if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
         this.itemForm.controls['imagePath'].setValue("/assets/images/items/" + this.imgurl);
         //window.location.href='#';
-        this.router.navigate(['/']);
       }
 
       const newItem = this.itemForm.value;
@@ -81,8 +80,11 @@ export class EditComponent implements OnInit, OnDestroy {
       );
       
       this.is.getItems();
-      
-      this.navigateBack();
+      if(this.isImgSelected){
+          if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
+          sessionStorage.setItem('img',  this.linkurl);
+          window.location.href='#';
+      } else this.navigateBack();
 
   
       
