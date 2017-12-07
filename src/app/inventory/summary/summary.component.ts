@@ -66,7 +66,7 @@ export class SummaryComponent implements OnInit {
       this.pie_ChartOptions = {
       title: 'Zestawienie dla budynku ' + b,
       width: 800,
-      height: 500
+      height: 460
       };
       for(var i=0; i<this.pom_array.length; i++){
         var singleItem = [this.pom_array[i].name, this.pom_array[i].quantity];
