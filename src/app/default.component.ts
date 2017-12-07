@@ -17,13 +17,15 @@ export class DefaultComponent{
        this.isLogged = true;
       }
 
+    if (sessionStorage.getItem('img')) this.isImgUploaded = true;
+
+
   }
 
-  ngOnInit(){
+ @HostListener('mousemove')  onmousemove(){
     if (sessionStorage.getItem('img')){
           this.router.navigate([sessionStorage.getItem('img')]);
           sessionStorage.removeItem('img');
-          this.isImgUploaded = true;
     }
 
   }

@@ -794,7 +794,7 @@ module.exports = "<app-header></app-header>\r\n\r\n<div class=\"container\">\r\n
 /***/ 210:
 /***/ (function(module, exports) {
 
-module.exports = " <a [routerLink]=\"['logowanie']\">\r\n  <div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2 class=\"display-2\">Witaj na stronie Inwentaryzacja sprzętu</h2>\r\n    <img src=\"/assets/images/lock.png\"  title=\"Zaloguj się\" alt=\"Zaloguj się\">\r\n    <h3 class=\"lead\">Aby móc korzystać z inwentarza, zaloguj się.</h3>\r\n  </div>\r\n</a>\r\n\r\n<div *ngIf=\"this.isLogged && !this.isImgUploaded\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2>Witaj,</h2>\r\n    <h3>zalogowano jako <b>{{this.user}}.</b></h3><br/>\r\n    <h4><i>Za pomocą menu nawigacyjnego możesz wybrać, co chcesz zrobić.</i></h4>\r\n</div>\r\n\r\n<div *ngIf=\"this.isImgUploaded\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h3>Zdjęcie zostało pomyślnie zuploadowane</h3>\r\n</div>\r\n\r\n<app-footer></app-footer>"
+module.exports = " <a [routerLink]=\"['logowanie']\">\r\n  <div *ngIf=\"!this.isLogged\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2 class=\"display-2\">Witaj na stronie Inwentaryzacja sprzętu</h2>\r\n    <img src=\"/assets/images/lock.png\"  title=\"Zaloguj się\" alt=\"Zaloguj się\">\r\n    <h3 class=\"lead\">Aby móc korzystać z inwentarza, zaloguj się.</h3>\r\n  </div>\r\n</a>\r\n\r\n<div *ngIf=\"this.isLogged && !this.isImgUploaded\" class=\"bs-callout bs-callout-info\" style=\"text-align:center;position:center;\">\r\n    <h2>Witaj,</h2>\r\n    <h3>zalogowano jako <b>{{this.user}}.</b></h3><br/>\r\n    <h4><i>Za pomocą menu nawigacyjnego możesz wybrać, co chcesz zrobić.</i></h4>\r\n</div>\r\n\r\n\r\n\r\n<div *ngIf=\"this.isImgUploaded\" class = \"fullscreen\" style=\"text-align:center;position:center;margin-top:20%;\">\r\n    <h1>Zdjęcie zostało zuploadowane pomyślnie</h1>\r\n</div> \r\n\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -982,6 +982,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var DefaultComponent = (function () {
     function DefaultComponent(router) {
         this.router = router;
@@ -992,16 +993,23 @@ var DefaultComponent = (function () {
             this.user = username;
             this.isLogged = true;
         }
+        if (sessionStorage.getItem('img'))
+            this.isImgUploaded = true;
     }
-    DefaultComponent.prototype.ngOnInit = function () {
+    DefaultComponent.prototype.onmousemove = function () {
         if (sessionStorage.getItem('img')) {
             this.router.navigate([sessionStorage.getItem('img')]);
             sessionStorage.removeItem('img');
-            this.isImgUploaded = true;
         }
     };
     return DefaultComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mousemove'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], DefaultComponent.prototype, "onmousemove", null);
 DefaultComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-default',
@@ -1158,7 +1166,7 @@ var EditComponent = (function () {
             else
                 this.linkurl = 'inwentarz';
             sessionStorage.setItem('img', this.linkurl);
-            window.location.href = '#';
+            this.router.navigate(['/']);
         }
         else
             this.navigateBack();

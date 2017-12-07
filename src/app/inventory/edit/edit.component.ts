@@ -83,7 +83,7 @@ export class EditComponent implements OnInit, OnDestroy {
       if(this.isImgSelected){
           if (!this.isNew) this.linkurl = 'inwentarz/' +this.itemIndex; else this.linkurl = 'inwentarz';
           sessionStorage.setItem('img',  this.linkurl);
-          window.location.href='#';
+          this.router.navigate(['/']);
       } else this.navigateBack();
 
   
