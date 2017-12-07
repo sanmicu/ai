@@ -1,5 +1,5 @@
 <h3>Wybierz budynek:</h3>
-<div class="well" style="margin-top:-20px;">
+<div class="well">
   <button class="btn btn-success" style="width: 8%; margin-right: 1%;" (click)="showSummary('A')"><b><h5>A</h5></b></button> 
   <button class="btn btn-success" style="width: 8%; margin-right: 1%;" (click)="showSummary('B')"><b><h5>B</h5></b></button>
   <button class="btn btn-success" style="width: 8%; margin-right: 1%;" (click)="showSummary('C')"><b><h5>C</h5></b></button>
@@ -7,7 +7,7 @@
   <button class="btn btn-success" style="width: 8%; margin-right: 1%;" (click)="showSummary('E')"><b><h5>E</h5></b></button> 
   <button class="btn btn-success" style="width: 8%; margin-right: 1%;" (click)="showSummary('F')"><b><h5>F</h5></b></button> 
 </div>
-<div *ngIf="this.selected" class="bs-callout bs-callout-default">
+<div *ngIf="this.selected" class="bs-callout bs-callout-default" style="margin-top:-20px;">
   <div [chartData]="pie_ChartData" [chartOptions] = "pie_ChartOptions" chartType="PieChart" style="margin-top:-20px;" (click)="this.selected = false" GoogleChart></div>
 </div>
 <app-footer></app-footer>
