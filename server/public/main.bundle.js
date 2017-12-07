@@ -857,7 +857,7 @@ module.exports = "<sebm-google-map \r\n      [latitude]=\"lat\"\r\n      [longit
 /***/ 219:
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Wybierz budynek:</h2>\r\n<div class=\"well\">\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('A')\"><b><h4>A</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('B')\"><b><h4>B</h4></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('C')\"><b><h4>C</h4></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('D')\"><b><h4>D</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('E')\"><b><h4>E</h4></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('F')\"><b><h4>F</h4></b></button> \r\n</div>\r\n<div *ngIf=\"this.selected\" class=\"bs-callout bs-callout-default\">\r\n  <div [chartData]=\"pie_ChartData\" [chartOptions] = \"pie_ChartOptions\" chartType=\"PieChart\" (click)=\"this.selected = false\" GoogleChart></div>\r\n</div>\r\n<app-footer></app-footer>\r\n\r\n"
+module.exports = "<h3>Wybierz budynek:</h3>\r\n<div class=\"well\">\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('A')\"><b><h3>A</h3></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('B')\"><b><h3>B</h3></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('C')\"><b><h3>C</h3></b></button>\r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('D')\"><b><h3>D</h3></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('E')\"><b><h3>E</h3></b></button> \r\n  <button class=\"btn btn-success\" style=\"width: 10%; margin-right: 1%;\" (click)=\"showSummary('F')\"><b><h3>F</h3></b></button> \r\n</div>\r\n<div *ngIf=\"this.selected\" class=\"bs-callout bs-callout-default\">\r\n  <div [chartData]=\"pie_ChartData\" [chartOptions] = \"pie_ChartOptions\" chartType=\"PieChart\" (click)=\"this.selected = false\" GoogleChart></div>\r\n</div>\r\n<app-footer></app-footer>\r\n\r\n"
 
 /***/ }),
 
@@ -1374,7 +1374,7 @@ var SummaryComponent = (function () {
         this.pie_ChartOptions = {
             title: 'Zestawienie dla budynku ' + b,
             width: 800,
-            height: 400
+            height: 500
         };
         for (var i = 0; i < this.pom_array.length; i++) {
             var singleItem = [this.pom_array[i].name, this.pom_array[i].quantity];
