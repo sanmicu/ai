@@ -464,7 +464,7 @@ var InventoryListComponent = (function () {
     InventoryListComponent.prototype.onSearch = function () {
         var pom = this.searchForm.controls['name'].value;
         for (var i = 0; i < this.items.length; i++)
-            if (this.items[i].name.toLowerCase().includes(pom.toLowerCase())) {
+            if (this.items[i].name.toLowerCase().includes(pom.toLowerCase()) && pom != null && pom != '') {
                 var linkurl = 'inwentarz/' + i;
                 this.router.navigate([linkurl]);
             }
