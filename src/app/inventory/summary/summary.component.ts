@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {GoogleChart} from 'angular2-google-chart/directives/angular2-google-chart.directive';
+import { GoogleChart } from 'angular2-google-chart/directives/angular2-google-chart.directive';
 
 import { InventoryService } from '../inventory.service';
 import { Item } from '../item';
@@ -11,8 +11,8 @@ import { Summary } from './summary';
 })
 export class SummaryComponent implements OnInit {
   items: Item[];
-  pom_array: Summary[]=[];
-  _pom_array: Summary;
+  summary: Summary[]=[];
+  itemInSummary: Summary;
   public pie_ChartData;
   public pie_ChartOptions;
   public selected: boolean = false;
@@ -31,36 +31,35 @@ export class SummaryComponent implements OnInit {
             {
               if (this.items[i].locations[j].building == b)
                   {                 
-                  this._pom_array =  {
+                  this.itemInSummary =  {
                       name: this.items[i].name,
                       quantity: Number(this.items[i].locations[j].quantity)
                   }
-                    this.pom_array.push(this._pom_array);
+                    this.summary.push(this.itemInSummary);
                   }
             }
      }
      
-     for(var i=0; i<this.pom_array.length-1; i++){
-        if(this.pom_array[i].name==this.pom_array[i+1].name)
+     for(var i=0; i<this.summary.length-1; i++){
+        if(this.summary[i].name==this.summary[i+1].name)
         {
-          this.pom_array[i+1].quantity += this.pom_array[i].quantity;
+          this.summary[i+1].quantity += this.summary[i].quantity;
         }
      }
 
-
       var obj = {};
-      for ( var i=0, len=this.pom_array.length; i < len; i++ )
+      for ( var i=0, len=this.summary.length; i < len; i++ )
       {
-        obj[this.pom_array[i]['name']] = this.pom_array[i];
+        obj[this.summary[i]['name']] = this.summary[i];
       }
 
-      var pom_array1 = new Array();
+      var pom_array = new Array();
       for ( var key in obj )
       {
-        pom_array1.push(obj[key]);
+        pom_array.push(obj[key]);
       }
 
-      this.pom_array = pom_array1;
+      this.summary = pom_array;
       this.pie_ChartData = [['Nazwa', 'Ilość']];
 
       this.pie_ChartOptions = {
@@ -68,14 +67,12 @@ export class SummaryComponent implements OnInit {
       width: 800,
       height: 460
       };
-      for(var i=0; i<this.pom_array.length; i++){
-        var singleItem = [this.pom_array[i].name, this.pom_array[i].quantity];
-        //console.log(singleItem);
+      for(var i=0; i<this.summary.length; i++){
+        var singleItem = [this.summary[i].name, this.summary[i].quantity];
         this.pie_ChartData.push(singleItem);
       }
       
-      //console.log(this.pom_array);
-      this.pom_array = [];
+      this.summary = [];
   }
 
 }
